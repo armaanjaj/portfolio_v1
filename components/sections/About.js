@@ -8,7 +8,7 @@ function About() {
                 <div className="inline">About me</div>
                 <div className="h-[2px] w-[80%] inline-block bg-[#350078]"></div>
             </div>
-            <div className="flex flex-row justify-between items-start">
+            <div className="flex flex-row justify-between items-start mt-[5rem]">
                 <div className="w-[50%] text-[20px]">
                     <p>
                         As a recent graduate with a strong foundation in a

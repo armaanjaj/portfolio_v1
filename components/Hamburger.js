@@ -3,8 +3,8 @@ import DehazeIcon from "@mui/icons-material/Dehaze";
 
 function Hamburger() {
   return (
-    <div>
-      <DehazeIcon/>
+    <div className='text-[#350078]'>
+      <DehazeIcon className='scale-[150%]'/>
     </div>
   )
 }
