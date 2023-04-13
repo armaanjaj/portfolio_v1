@@ -8,10 +8,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
     background-color: #08001A;
     color: white;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
