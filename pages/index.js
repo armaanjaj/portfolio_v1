@@ -12,9 +12,11 @@ import { useEffect, useState } from "react";
 export default function Home() {
 
     const [projects, setProjects] = useState([]);
+    const [skills, setSkills] = useState([]);
 
     useEffect(()=>{
         getAllProjects();
+        getAllSkills();
     },[])
 
     const getAllProjects = ()=>{
@@ -32,6 +34,21 @@ export default function Home() {
         })
     }
 
+    const getAllSkills = ()=>{
+        fetch('/api/getSkills', {
+            credentials: 'same-origin',
+            mode: 'cors',
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        .then(skills => skills.json())
+        .then(skills => {
+            if(skills) setSkills(skills)
+        })
+    }
+
     return (
         <>
             <Navigation />
@@ -39,7 +56,7 @@ export default function Home() {
             <div className={styles.container}>
                 <About />
                 <Projects projects={projects}/>
-                <Skills />
+                <Skills skills={skills}/>
                 <Contact />
             </div>
         </>

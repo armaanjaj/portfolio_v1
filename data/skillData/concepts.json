@@ -1,0 +1,22 @@
+{
+    "title":"Concepts",
+    "skills":[
+        {
+            "name":"Object Oriented Programming",
+            "icon":null
+        },
+        {
+            "name":"Functional Programming",
+            "icon":null
+        },
+        {
+            "name":"Database Administration",
+            "icon":null
+        },
+        {
+            "name":"Data structures and algorightms",
+            "icon":null
+        }
+    ],
+    "index":6
+}

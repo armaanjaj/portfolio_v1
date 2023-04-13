@@ -1,0 +1,26 @@
+{
+    "title":"Programming Languages",
+    "skills":[
+        {
+            "name":"Java",
+            "icon":"JavaOriginal"
+        },
+        {
+            "name":"Kotlin",
+            "icon":"KotlinOriginal"
+        },
+        {
+            "name":"Python",
+            "icon":"PythonOriginal"
+        },
+        {
+            "name":"PHP",
+            "icon":"PhpOriginal"
+        },
+        {
+            "name":"C",
+            "icon":"COriginal"
+        }
+    ],
+    "index":4
+}

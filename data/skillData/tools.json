@@ -1,0 +1,18 @@
+{
+    "title":"Tools",
+    "skills":[
+        {
+            "name":"Github",
+            "icon":"GithubOriginal"
+        },
+        {
+            "name":"Git",
+            "icon":"GitOriginal"
+        },
+        {
+            "name":"Figma",
+            "icon":"FigmaOriginal"
+        }
+    ],
+    "index":5
+}

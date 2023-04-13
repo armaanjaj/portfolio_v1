@@ -1,0 +1,26 @@
+{
+    "title":"Front end",
+    "skills":[
+        {
+            "name":"Next.js",
+            "icon":"NextjsOriginal"
+        },
+        {
+            "name":"React.js",
+            "icon":"ReactOriginal"
+        },
+        {
+            "name":"Tailwind",
+            "icon":"TailwindcssPlain"
+        },
+        {
+            "name":"JavaScript",
+            "icon":"JavascriptOriginal"
+        },
+        {
+            "name":"MUI",
+            "icon":"MaterialuiOriginal"
+        }
+    ],
+    "index":1
+}
