@@ -1,0 +1,20 @@
+{
+    "title": "Portfolio",
+    "slug":"portfolio",
+    "overview": "This is the new version of my portfolio website created using Next.js framework.",
+    "type": "Website",
+    "timeline": {
+        "startDate": "06 April 2023",
+        "endDate": false
+    },
+    "associated": {
+        "name": "Personal"
+    },
+    "stack": [
+        "Next.js", "React.js", "Node.js", "Tailwind"
+    ],
+    "links": {
+        "github": "https://github.com/armaanjaj/portfolio_v2",
+        "hosted": false
+    }
+}

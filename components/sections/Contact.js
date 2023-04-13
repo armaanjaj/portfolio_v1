@@ -145,7 +145,7 @@ function Contact() {
                                 }}
                                 transition={{
                                     duration: 0.5,
-                                    delay: 0.9,
+                                    delay: 0.8,
                                 }}
                                 className="flex flex-col justify-center items-start relative my-2 w-full"
                             >
@@ -178,7 +178,7 @@ function Contact() {
                             }}
                             transition={{
                                 duration: 0.5,
-                                delay: 0.9,
+                                delay: 0.8,
                             }}
                             className="flex flex-col justify-center items-start relative my-2"
                         >
@@ -211,7 +211,7 @@ function Contact() {
                             }}
                             transition={{
                                 duration: 0.5,
-                                delay: 0.9,
+                                delay: 0.8,
                             }}
                             className="flex flex-col justify-center items-center relative my-2"
                         >

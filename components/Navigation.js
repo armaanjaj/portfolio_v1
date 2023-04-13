@@ -22,7 +22,7 @@ function Hamburger() {
             height: "100vh",
             transition: {
                 type: "spring",
-                stiffness: 400,
+                stiffness: 100,
                 damping: 40,
                 mass: 0.8,
                 staggerChildren: 0.1,
@@ -33,7 +33,7 @@ function Hamburger() {
             height: 0,
             transition: {
                 type: "spring",
-                stiffness: 400,
+                stiffness: 300,
                 damping: 40,
                 mass: 0.8,
                 staggerChildren: 0.1,

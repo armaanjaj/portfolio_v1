@@ -1,0 +1,20 @@
+{
+    "title": "Connect",
+    "slug":"connect",
+    "overview": "Connect is a real time full stack chat application which runs on PHP. It is connected to the MySQL database for storing user's personal information and their messages. It uses JavaScript to handle user inputs on the front-end to send information to PHP through AJAX and update the front-end over frequent intervals of time.",
+    "type":"Web application",
+    "timeline":{
+        "startDate":"26 September 2022",
+        "endDate":"27 September 2022"
+    },
+    "associated":{
+        "name":"Personal"
+    },
+    "stack":[
+        "PHP","JavaScript","XHRHttpRequest"
+    ],
+    "links":{
+        "github":"https://github.com/armaanjaj/connect",
+        "hosted":false
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "title": "MyInventory",
+    "slug":"myinventory",
+    "overview": "This is one of my full stack side projects. myinventory is an inventory managing web application, which is designed using JavaScript framework React.js for the front-end and Node.js which uses Express.js library for back-end. It uses MySQL to store users and their inventory information in the database.",
+    "type":"Web application",
+    "timeline":{
+        "startDate":"17 September 2022",
+        "endDate":false
+    },
+    "associated":{
+        "name":"Personal"
+    },
+    "stack":[
+        "React.js","Node.js","MySQL"
+    ],
+    "links":{
+        "github":"https://github.com/armaanjaj/myinventory",
+        "hosted":false
+    },
+    "contributors":[
+        {
+            "name":"Vaibhav Kumar",
+            "linkedin":"https://linkedin.com/in/vaibhavkumar"
+        }
+    ]
+}

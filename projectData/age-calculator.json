@@ -1,0 +1,20 @@
+{
+    "title": "Age Calculator",
+    "slug":"age-calculator",
+    "overview": "A simple yet useful android app which converts your age into minutes. It offers you the feature to choose your date of birth, the month and the year from the calender. After you have selected the date and pressed OK, it will show you the results of your selection.",
+    "type":"Mobile/Android",
+    "timeline":{
+        "startDate":"5 October 2022",
+        "endDate":"6 October 2022"
+    },
+    "associated":{
+        "name":"Southern Alberta Institute of Technology"
+    },
+    "stack":[
+        "Kotlin","Android Studio"
+    ],
+    "links":{
+        "github":"https://github.com/armaanjaj/age-in-minutes",
+        "hosted":false
+    }
+}

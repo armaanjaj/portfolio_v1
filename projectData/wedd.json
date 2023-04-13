@@ -1,0 +1,38 @@
+{
+    "title": "WeDD.ca",
+    "slug":"wedd",
+    "overview": "For our capstone project, we developed a ride booking service for a company called WeDD. It was developed using React.js, Express.js, Node.js and MySQL database. WeDD is a multiuser and multi-role application where customers, drivers and administrators can interact and use features their role allows them, simultaneously.",
+    "type":"Web application",
+    "timeline":{
+        "startDate":"28 October 2022",
+        "endDate":"16 December 2022"
+    },
+    "associated":{
+        "name":"Southern Alberta Institute of Technology"
+    },
+    "stack":[
+        "React.js","Node.js","MySQL","Express"
+    ],
+    "links":{
+        "github":"https://github.com/armaansinghjaj/Wedd-Fullstack-application",
+        "hosted":false
+    },
+    "contributors":[
+        {
+            "name":"Vaibhav Kumar",
+            "linkedin":"https://linkedin.com/in/vaibhavkumar"
+        },
+        {
+            "name":"Prince Bhagria",
+            "linkedin":"https://linkedin.com/in/vaibhavkumar"
+        },
+        {
+            "name":"Daniel Wong",
+            "linkedin":"https://linkedin.com/in/vaibhavkumar"
+        },
+        {
+            "name":"Shubhpreet Kaur",
+            "linkedin":"https://linkedin.com/in/vaibhavkumar"
+        }
+    ]
+}

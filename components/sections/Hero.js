@@ -68,7 +68,7 @@ function Hero() {
                             delay: 0.3,
                             type: "spring",
                         }}
-                        className="flex flex-row justify-center items-center text-[#EBB700] text-[3rem] font-extrabold whitespace-nowrap"
+                        className="flex flex-row justify-center items-center text-[#EBB700] text-[3rem] font-extrabold text-center"
                     >
                         Armaan Singh Jaj
                     </motion.div>
@@ -86,7 +86,7 @@ function Hero() {
                             delay: 0.4,
                             type: "spring",
                         }}
-                        className="flex flex-row justify-center items-center text-[2rem] font-extrabold whitespace-nowrap"
+                        className="flex flex-row justify-center items-center text-[2rem] font-extrabold text-center"
                     >
                         I'm a Full Stack Developer
                     </motion.div>
@@ -108,12 +108,12 @@ function Hero() {
                                 type: "spring",
                             }}
                         >
-                            <input
+                            <Link
                                 className="px-[0.75rem] py-[0.50rem] bg-[#EBB700] rounded-[8px] font-bold hover:cursor-pointer"
-                                type="button"
-                                value="Get in touch"
-                                onClick={sayhi}
-                            />
+                                href={"mailto:armaan.jaj@gmail.com"}
+                            >
+                                Get in touch
+                            </Link>
                         </motion.div>
 
                         {/* Divider */}
@@ -157,7 +157,8 @@ function Hero() {
                                         "https://linkedin.com/in/connectarmaan"
                                     }
                                     target={"_blank"}
-                                    className="text-[#0a66c2]"
+                                    // className="text-[#0a66c2]"
+                                    className="text-[#350078]"
                                 >
                                     <LinkedInIcon className="scale-[150%]" />
                                 </Link>
@@ -182,7 +183,8 @@ function Hero() {
                                 <Link
                                     href={"https://twitter.com/iamArmaan__"}
                                     target={"_blank"}
-                                    className="text-[#0a66c2]"
+                                    // className="text-[#0a66c2]"
+                                    className="text-[#350078]"
                                 >
                                     <TwitterIcon className="scale-[150%]" />
                                 </Link>
@@ -207,7 +209,7 @@ function Hero() {
                                 <Link
                                     href={"https://instagram.com/armaan_jaj"}
                                     target={"_blank"}
-                                    className="text-[#0a66c2]"
+                                    className="text-[#350078]"
                                 >
                                     <InstagramIcon className="scale-[150%]" />
                                 </Link>
@@ -230,7 +232,7 @@ function Hero() {
                                 className="flex flex-row justify-center items-center mobile:w-[3rem] mobile:h-[3rem] tablet:w-[3rem] tablet:h-[3rem] laptop:w-[2.5rem] laptop:h-[2.5rem] desktop:w-[2.5rem] desktop:h-[2.5rem] rounded-[17px] bg-white"
                             >
                                 <Link
-                                    className="text-black"
+                                    className="text-[#350078]"
                                     target={"_blank"}
                                     href={"https://github.com/armaanjaj"}
                                 >
@@ -292,7 +294,9 @@ function Hero() {
                             duration: 2,
                             delay: 0.2,
                             type: "spring",
-                        }} className="w-0 h-0 right-0 top-0 absolute border-solid border-t-[384px] border-t-[#350078] border-r-[384px] border-r-transparent border-l-[384px] border-l-transparent border-b-[384px] border-b-transparent"></motion.div>
+                        }}
+                        className="w-0 h-0 right-0 top-0 absolute border-solid border-t-[384px] border-t-[#350078] border-r-[384px] border-r-transparent border-l-[384px] border-l-transparent border-b-[384px] border-b-transparent"
+                    ></motion.div>
                 </div>
             </div>
             <motion.div
