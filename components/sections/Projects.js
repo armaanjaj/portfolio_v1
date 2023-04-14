@@ -47,7 +47,7 @@ function Projects({ projects }) {
                     className="h-[2px] mobile:w-[60%] tablet:w-[60%] laptop:w-[80%] desktop:w-[80%] inline-block bg-[#350078]"
                 ></motion.div>
             </div>
-            <div className="flex flex-row justify-start items-center flex-wrap gap-5 mobile:mt-[2rem] tablet:mt-[2rem] laptop:mt-[5rem] desktop:mt-[5rem]">
+            <div className="flex flex-row justify-center items-center flex-wrap gap-5 mobile:mt-[2rem] tablet:mt-[2rem] laptop:mt-[5rem] desktop:mt-[5rem]">
                 {projects?.map((project, i) => (
                     <motion.div
                         initial={{
@@ -64,6 +64,7 @@ function Projects({ projects }) {
                         }}
                         transition={{
                             duration: 0.5,
+                            delay:i/10
                         }}
                         key={i}
                     >

@@ -8,55 +8,56 @@ import Projects from "@/components/sections/Projects";
 import Skills from "@/components/sections/Skills";
 import Contact from "@/components/sections/Contact";
 import { useEffect, useState } from "react";
+import Meta from "@/components/Meta";
 
 export default function Home() {
-
     const [projects, setProjects] = useState([]);
     const [skills, setSkills] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         getAllProjects();
         getAllSkills();
-    },[])
+    }, []);
 
-    const getAllProjects = ()=>{
-        fetch('/api/getProjects', {
-            credentials: 'same-origin',
-            mode: 'cors',
-            method: 'GET',
+    const getAllProjects = () => {
+        fetch("/api/getProjects", {
+            credentials: "same-origin",
+            mode: "cors",
+            method: "GET",
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
             },
         })
-        .then(projects => projects.json())
-        .then(projects => {
-            if(projects) setProjects(projects)
-        })
-    }
+            .then((projects) => projects.json())
+            .then((projects) => {
+                if (projects) setProjects(projects);
+            });
+    };
 
-    const getAllSkills = ()=>{
-        fetch('/api/getSkills', {
-            credentials: 'same-origin',
-            mode: 'cors',
-            method: 'GET',
+    const getAllSkills = () => {
+        fetch("/api/getSkills", {
+            credentials: "same-origin",
+            mode: "cors",
+            method: "GET",
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
             },
         })
-        .then(skills => skills.json())
-        .then(skills => {
-            if(skills) setSkills(skills)
-        })
-    }
+            .then((skills) => skills.json())
+            .then((skills) => {
+                if (skills) setSkills(skills);
+            });
+    };
 
     return (
         <>
+            <Meta />
             <Navigation />
             <Hero />
             <div className={styles.container}>
                 <About />
-                <Projects projects={projects}/>
-                <Skills skills={skills}/>
+                <Projects projects={projects} />
+                <Skills skills={skills} />
                 <Contact />
             </div>
         </>

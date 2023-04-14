@@ -8,7 +8,7 @@
         "endDate": false
     },
     "associated": {
-        "name": "Personal"
+        "name": "Personal project"
     },
     "stack": [
         "React.js"

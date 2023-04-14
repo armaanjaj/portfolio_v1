@@ -141,7 +141,7 @@ function Hamburger() {
                 // className="text-[#350078]"
                 onClick={toggleMenu}
             >
-                <DehazeIcon className="mobile:scale-[200%] tablet:scale-[200%] laptop:scale-[150%] desktop:scale-[150%] rotate-90 mobile:absolute tablet:absolute laptop:static desktop:static mt-[60px] mobile:mx-[20px] tablet:mx-[20px] laptop:mx-[50px] desktop:mx-[50px]" />
+                <DehazeIcon className="mobile:scale-[200%] tablet:scale-[200%] laptop:scale-[150%] desktop:scale-[150%] rotate-90 mobile:absolute tablet:absolute laptop:static desktop:static mt-[60px] mobile:mx-[20px] tablet:mx-[40px] laptop:mx-[50px] desktop:mx-[50px]" />
             </motion.div>
         </>
     );

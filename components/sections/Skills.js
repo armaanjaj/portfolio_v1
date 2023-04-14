@@ -44,7 +44,7 @@ function Skills({ skills }) {
                         duration: 0.5,
                         delay: 0.4,
                     }}
-                    className="h-[2px] mobile:w-[60%] tablet:w-[60%] laptop:w-[70%] desktop:w-[70%] inline-block bg-[#350078]"
+                    className="h-[2px] mobile:w-[60%] tablet:w-[80%] laptop:w-[70%] desktop:w-[70%] inline-block bg-[#350078]"
                 ></motion.div>
             </div>
             <div className="flex flex-col justify-center items-start mobile:mt-[2rem] tablet:mt-[2rem] laptop:mt-[5rem] desktop:mt-[5rem] gap-6">
@@ -63,7 +63,7 @@ function Skills({ skills }) {
                             amount: 1,
                         }}
                         transition={{
-                            duration: 0.5,
+                            duration: 0.5
                         }}
                         className="w-full"
                         key={i}

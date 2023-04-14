@@ -16,5 +16,11 @@
     "links":{
         "github":"https://github.com/armaanjaj/age-in-minutes",
         "hosted":false
-    }
+    },
+    "images":[
+        {
+            "path":"/projects/agecalculator/home.png",
+            "alt":"Image showing the entry screen of age calculator mobile application."
+        }
+    ]
 }

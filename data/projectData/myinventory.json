@@ -8,7 +8,7 @@
         "endDate":false
     },
     "associated":{
-        "name":"Personal"
+        "name":"Personal project"
     },
     "stack":[
         "React.js","Node.js","MySQL"
@@ -17,10 +17,10 @@
         "github":"https://github.com/armaanjaj/myinventory",
         "hosted":false
     },
-    "contributors":[
+    "images":[
         {
-            "name":"Vaibhav Kumar",
-            "linkedin":"https://linkedin.com/in/vaibhavkumar"
+            "path":"/projects/myinventory/inventory.png",
+            "alt":"Image showing the inventory page of myinventory web application."
         }
     ]
 }
