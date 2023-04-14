@@ -1,25 +1,5 @@
 [
     {
-        "title": "React Resume",
-        "slug": "react-resume",
-        "overview": "An e-commerce platform for buying and selling succulent plants. The platform was built using MERN (MongoDB, Express.js, React.js and Node.js) with an addition of GraphQL for querying purposes. React along with Material UI and Framer motion was used for creating a seemless and intuitive User Interface where as the backend was built using Node, express and GraphQL. GraphQL was used for making queries to the MongoDB database. All the technologies were self taught which provided a great learning experience of the MERN stack. The website provided a platform for buying and selling the succulent plants. We worked with a client to translate her business needs into tangible software features. The platform comprised of Home page, Collection pages for Succulents, Pots, Soils and Grow Lights. The website also consisted of Admin functionality to allow the client to add, update and delete any products in the inventory.",
-        "type": "Website",
-        "timeline": {
-            "startDate": "19 April 2023",
-            "endDate": false
-        },
-        "associated": {
-            "name": "Personal project"
-        },
-        "stack": [
-            "React.js"
-        ],
-        "links": {
-            "github": "https://github.com/armaanjaj/React-Resume",
-            "hosted": false
-        }
-    },
-    {
         "title": "Portfolio",
         "slug": "portfolio",
         "overview": "This is the new version of my portfolio website created using Next.js framework.",
