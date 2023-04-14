@@ -17,6 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 * @mui/icons-material
 * @mui/material
 * framer-motion
+* devicons-react
 
 ## Screenshots
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/113659942/231727880-4a93c014-a9a6-4071-9920-c7b66ba4ab9a.png">
