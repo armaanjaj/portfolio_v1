@@ -1,57 +1,43 @@
 [
     {
-        "title": "Front end",
+        "title": "Concepts",
         "skills": [
             {
-                "name": "Next.js",
-                "icon": "NextjsOriginal"
+                "name": "Object Oriented Programming",
+                "icon": null
             },
             {
-                "name": "React.js",
-                "icon": "ReactOriginal"
+                "name": "Functional Programming",
+                "icon": null
             },
             {
-                "name": "Tailwind",
-                "icon": "TailwindcssPlain"
+                "name": "Database Administration",
+                "icon": null
             },
             {
-                "name": "JavaScript",
-                "icon": "JavascriptOriginal"
-            },
-            {
-                "name": "MUI",
-                "icon": "MaterialuiOriginal"
+                "name": "Data structures and algorightms",
+                "icon": null
             }
         ],
-        "index": 1
+        "index": 6
     },
     {
-        "title": "Back end",
+        "title": "Tools",
         "skills": [
             {
-                "name": "Node.js",
-                "icon": "NodejsOriginal"
+                "name": "Github",
+                "icon": "GithubOriginal"
             },
             {
-                "name": "Express.js",
-                "icon": "ExpressOriginal"
-            }
-        ],
-        "index": 2
-    },
-    {
-        "title": "Databases",
-        "skills": [
-            {
-                "name": "MySQL",
-                "icon": "MysqlOriginal"
+                "name": "Git",
+                "icon": "GitOriginal"
             },
             {
-                "name": "MongoDB",
-                "icon": "MongodbOriginal"
+                "name": "Figma",
+                "icon": "FigmaOriginal"
             }
         ],
-        "index": 3
+        "index": 5
     },
     {
         "title": "Programming Languages",
@@ -80,43 +66,57 @@
         "index": 4
     },
     {
-        "title": "Tools",
+        "title": "Databases",
         "skills": [
             {
-                "name": "Github",
-                "icon": "GithubOriginal"
+                "name": "MySQL",
+                "icon": "MysqlOriginal"
             },
             {
-                "name": "Git",
-                "icon": "GitOriginal"
-            },
-            {
-                "name": "Figma",
-                "icon": "FigmaOriginal"
+                "name": "MongoDB",
+                "icon": "MongodbOriginal"
             }
         ],
-        "index": 5
+        "index": 3
     },
     {
-        "title": "Concepts",
+        "title": "Back end",
         "skills": [
             {
-                "name": "Object Oriented Programming",
-                "icon": null
+                "name": "Node.js",
+                "icon": "NodejsOriginal"
             },
             {
-                "name": "Functional Programming",
-                "icon": null
-            },
-            {
-                "name": "Database Administration",
-                "icon": null
-            },
-            {
-                "name": "Data structures and algorightms",
-                "icon": null
+                "name": "Express.js",
+                "icon": "ExpressOriginal"
             }
         ],
-        "index": 6
+        "index": 2
+    },
+    {
+        "title": "Front end",
+        "skills": [
+            {
+                "name": "Next.js",
+                "icon": "NextjsOriginal"
+            },
+            {
+                "name": "React.js",
+                "icon": "ReactOriginal"
+            },
+            {
+                "name": "Tailwind",
+                "icon": "TailwindcssPlain"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "JavascriptOriginal"
+            },
+            {
+                "name": "MUI",
+                "icon": "MaterialuiOriginal"
+            }
+        ],
+        "index": 1
     }
 ]
