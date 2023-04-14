@@ -8,7 +8,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Image from "next/image";
 import Link from "next/link";
 
-function slug() {
+function Slug() {
     const router = useRouter();
 
     const [projectDetails, setProjectDetails] = useState([]);
@@ -372,4 +372,4 @@ function slug() {
     );
 }
 
-export default slug;
+export default Slug;
