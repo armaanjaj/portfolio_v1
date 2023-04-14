@@ -1,0 +1,122 @@
+[
+    {
+        "title": "Front end",
+        "skills": [
+            {
+                "name": "Next.js",
+                "icon": "NextjsOriginal"
+            },
+            {
+                "name": "React.js",
+                "icon": "ReactOriginal"
+            },
+            {
+                "name": "Tailwind",
+                "icon": "TailwindcssPlain"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "JavascriptOriginal"
+            },
+            {
+                "name": "MUI",
+                "icon": "MaterialuiOriginal"
+            }
+        ],
+        "index": 1
+    },
+    {
+        "title": "Back end",
+        "skills": [
+            {
+                "name": "Node.js",
+                "icon": "NodejsOriginal"
+            },
+            {
+                "name": "Express.js",
+                "icon": "ExpressOriginal"
+            }
+        ],
+        "index": 2
+    },
+    {
+        "title": "Databases",
+        "skills": [
+            {
+                "name": "MySQL",
+                "icon": "MysqlOriginal"
+            },
+            {
+                "name": "MongoDB",
+                "icon": "MongodbOriginal"
+            }
+        ],
+        "index": 3
+    },
+    {
+        "title": "Programming Languages",
+        "skills": [
+            {
+                "name": "Java",
+                "icon": "JavaOriginal"
+            },
+            {
+                "name": "Kotlin",
+                "icon": "KotlinOriginal"
+            },
+            {
+                "name": "Python",
+                "icon": "PythonOriginal"
+            },
+            {
+                "name": "PHP",
+                "icon": "PhpOriginal"
+            },
+            {
+                "name": "C",
+                "icon": "COriginal"
+            }
+        ],
+        "index": 4
+    },
+    {
+        "title": "Tools",
+        "skills": [
+            {
+                "name": "Github",
+                "icon": "GithubOriginal"
+            },
+            {
+                "name": "Git",
+                "icon": "GitOriginal"
+            },
+            {
+                "name": "Figma",
+                "icon": "FigmaOriginal"
+            }
+        ],
+        "index": 5
+    },
+    {
+        "title": "Concepts",
+        "skills": [
+            {
+                "name": "Object Oriented Programming",
+                "icon": null
+            },
+            {
+                "name": "Functional Programming",
+                "icon": null
+            },
+            {
+                "name": "Database Administration",
+                "icon": null
+            },
+            {
+                "name": "Data structures and algorightms",
+                "icon": null
+            }
+        ],
+        "index": 6
+    }
+]

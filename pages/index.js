@@ -9,6 +9,8 @@ import Skills from "@/components/sections/Skills";
 import Contact from "@/components/sections/Contact";
 import { useEffect, useState } from "react";
 import Meta from "@/components/Meta";
+import allProjects from "../data/projectData/index.json";
+import allSkills from "../data/skillData/index.json"
 
 export default function Home() {
     const [projects, setProjects] = useState([]);
@@ -20,33 +22,11 @@ export default function Home() {
     }, []);
 
     const getAllProjects = () => {
-        fetch("/api/getProjects", {
-            credentials: "same-origin",
-            mode: "cors",
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        })
-            .then((projects) => projects.json())
-            .then((projects) => {
-                if (projects) setProjects(projects);
-            });
+        setProjects(allProjects.map((project) => project));
     };
 
     const getAllSkills = () => {
-        fetch("/api/getSkills", {
-            credentials: "same-origin",
-            mode: "cors",
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        })
-            .then((skills) => skills.json())
-            .then((skills) => {
-                if (skills) setSkills(skills);
-            });
+        setSkills(allSkills.reverse().map((skill) => skill));
     };
 
     return (

@@ -96,7 +96,7 @@ function Hamburger() {
                                     Skills
                                 </a>
                             </motion.div>
-                            <motion.div
+                            {/* <motion.div
                                 className="mb-4 text-center"
                                 variants={menuItemVariants}
                             >
@@ -106,7 +106,7 @@ function Hamburger() {
                                 >
                                     Blogs
                                 </a>
-                            </motion.div>
+                            </motion.div> */}
                             <motion.div
                                 className="mb-4 text-center"
                                 variants={menuItemVariants}

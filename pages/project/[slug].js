@@ -7,6 +7,7 @@ import OpenInBrowserIcon from "@mui/icons-material/OpenInBrowser";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Image from "next/image";
 import Link from "next/link";
+import allProjects from "../../data/projectData/index.json";
 
 function SlugPage() {
     const router = useRouter();
@@ -19,20 +20,13 @@ function SlugPage() {
         const { slug } = router.query;
         getProjectDetails(slug);
     }, [router.isReady]);
-
+    
     const getProjectDetails = (slug) => {
-        fetch(`/api/getProject?slug=${slug}`, {
-            credentials: "same-origin",
-            mode: "cors",
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        })
-            .then((projects) => projects.json())
-            .then((projects) => {
-                if (projects) setProjectDetails(projects);
-            });
+        allProjects.map((project) => {
+            if (project.slug === slug) {
+                setProjectDetails(project);
+            }
+        });
     };
 
     return (

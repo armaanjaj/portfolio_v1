@@ -1,0 +1,183 @@
+[
+    {
+        "title": "React Resume",
+        "slug": "react-resume",
+        "overview": "An e-commerce platform for buying and selling succulent plants. The platform was built using MERN (MongoDB, Express.js, React.js and Node.js) with an addition of GraphQL for querying purposes. React along with Material UI and Framer motion was used for creating a seemless and intuitive User Interface where as the backend was built using Node, express and GraphQL. GraphQL was used for making queries to the MongoDB database. All the technologies were self taught which provided a great learning experience of the MERN stack. The website provided a platform for buying and selling the succulent plants. We worked with a client to translate her business needs into tangible software features. The platform comprised of Home page, Collection pages for Succulents, Pots, Soils and Grow Lights. The website also consisted of Admin functionality to allow the client to add, update and delete any products in the inventory.",
+        "type": "Website",
+        "timeline": {
+            "startDate": "19 April 2023",
+            "endDate": false
+        },
+        "associated": {
+            "name": "Personal project"
+        },
+        "stack": [
+            "React.js"
+        ],
+        "links": {
+            "github": "https://github.com/armaanjaj/React-Resume",
+            "hosted": false
+        }
+    },
+    {
+        "title": "Portfolio",
+        "slug": "portfolio",
+        "overview": "This is the new version of my portfolio website created using Next.js framework.",
+        "type": "Website",
+        "timeline": {
+            "startDate": "06 April 2023",
+            "endDate": false
+        },
+        "associated": {
+            "name": "Personal project"
+        },
+        "stack": [
+            "Next.js",
+            "React.js",
+            "Node.js",
+            "Tailwind"
+        ],
+        "links": {
+            "github": "https://github.com/armaanjaj/portfolio_v2",
+            "hosted": false
+        },
+        "images": [
+            {
+                "path": "/projects/portfolio/home.png",
+                "alt": "Image showing the home page of the portfolio website."
+            }
+        ]
+    },
+    {
+        "title": "WeDD.ca",
+        "slug": "wedd",
+        "overview": "For our capstone project, we developed a ride booking service for a company called WeDD. It was developed using React.js, Express.js, Node.js and MySQL database. WeDD is a multiuser and multi-role application where customers, drivers and administrators can interact and use features their role allows them, simultaneously.",
+        "type": "Web application",
+        "timeline": {
+            "startDate": "28 October 2022",
+            "endDate": "16 December 2022"
+        },
+        "associated": {
+            "name": "Southern Alberta Institute of Technology"
+        },
+        "stack": [
+            "React.js",
+            "Node.js",
+            "MySQL",
+            "Express"
+        ],
+        "links": {
+            "github": "https://github.com/armaansinghjaj/Wedd-Fullstack-application",
+            "hosted": false
+        },
+        "contributors": [
+            {
+                "name": "Vaibhav Kumar",
+                "linkedin": "https://linkedin.com/in/vaibhavkumar"
+            },
+            {
+                "name": "Prince Bhagria",
+                "linkedin": "https://linkedin.com/in/vaibhavkumar"
+            },
+            {
+                "name": "Daniel Wong",
+                "linkedin": "https://linkedin.com/in/vaibhavkumar"
+            },
+            {
+                "name": "Shubhpreet Kaur",
+                "linkedin": "https://linkedin.com/in/vaibhavkumar"
+            }
+        ],
+        "images": [
+            {
+                "path": "/projects/wedd/home.png",
+                "alt": "Image showing the home page wedd web application."
+            },
+            {
+                "path": "/projects/wedd/login.png",
+                "alt": "Image showing the login page wedd web application."
+            },
+            {
+                "path": "/projects/wedd/signup.png",
+                "alt": "Image showing the signup page wedd web application."
+            }
+        ]
+    },
+    {
+        "title": "Age Calculator",
+        "slug": "age-calculator",
+        "overview": "A simple yet useful android app which converts your age into minutes. It offers you the feature to choose your date of birth, the month and the year from the calender. After you have selected the date and pressed OK, it will show you the results of your selection.",
+        "type": "Mobile/Android",
+        "timeline": {
+            "startDate": "5 October 2022",
+            "endDate": "6 October 2022"
+        },
+        "associated": {
+            "name": "Southern Alberta Institute of Technology"
+        },
+        "stack": [
+            "Kotlin",
+            "Android Studio"
+        ],
+        "links": {
+            "github": "https://github.com/armaanjaj/age-in-minutes",
+            "hosted": false
+        },
+        "images": [
+            {
+                "path": "/projects/agecalculator/home.png",
+                "alt": "Image showing the entry screen of age calculator mobile application."
+            }
+        ]
+    },
+    {
+        "title": "Connect",
+        "slug": "connect",
+        "overview": "Connect is a real time full stack chat application which runs on PHP. It is connected to the MySQL database for storing user's personal information and their messages. It uses JavaScript to handle user inputs on the front-end to send information to PHP through AJAX and update the front-end over frequent intervals of time.",
+        "type": "Web application",
+        "timeline": {
+            "startDate": "26 September 2022",
+            "endDate": "27 September 2022"
+        },
+        "associated": {
+            "name": "Personal project"
+        },
+        "stack": [
+            "PHP",
+            "JavaScript",
+            "XHRHttpRequest"
+        ],
+        "links": {
+            "github": "https://github.com/armaanjaj/connect",
+            "hosted": false
+        }
+    },
+    {
+        "title": "MyInventory",
+        "slug": "myinventory",
+        "overview": "This is one of my full stack side projects. myinventory is an inventory managing web application, which is designed using JavaScript framework React.js for the front-end and Node.js which uses Express.js library for back-end. It uses MySQL to store users and their inventory information in the database.",
+        "type": "Web application",
+        "timeline": {
+            "startDate": "17 September 2022",
+            "endDate": false
+        },
+        "associated": {
+            "name": "Personal project"
+        },
+        "stack": [
+            "React.js",
+            "Node.js",
+            "MySQL"
+        ],
+        "links": {
+            "github": "https://github.com/armaanjaj/myinventory",
+            "hosted": false
+        },
+        "images": [
+            {
+                "path": "/projects/myinventory/inventory.png",
+                "alt": "Image showing the inventory page of myinventory web application."
+            }
+        ]
+    }
+]
