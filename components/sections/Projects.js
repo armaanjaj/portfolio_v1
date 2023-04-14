@@ -25,7 +25,7 @@ function Projects({ projects }) {
                     }}
                     className="inline"
                 >
-                    Projects I've worked on
+                    Projects I&apos;ve worked on
                 </motion.div>
                 <motion.div
                     initial={{

@@ -89,7 +89,7 @@ function Hero() {
                             }}
                             className="flex flex-row justify-center items-center text-[2rem] font-extrabold text-center"
                         >
-                            I'm a Full Stack Developer
+                            I&apos;m a Full Stack Developer
                         </motion.div>
 
                         {/* Div containing 'Get in touch' button and socials */}

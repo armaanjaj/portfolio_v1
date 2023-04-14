@@ -8,7 +8,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Image from "next/image";
 import Link from "next/link";
 
-function Slug() {
+function SlugPage() {
     const router = useRouter();
 
     const [projectDetails, setProjectDetails] = useState([]);
@@ -372,4 +372,19 @@ function Slug() {
     );
 }
 
-export default Slug;
+export default SlugPage;
+
+function getProjectDetails(slug) {
+    fetch(`/api/getProject?slug=${slug}`, {
+        credentials: "same-origin",
+        mode: "cors",
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+        .then((projects) => projects.json())
+        .then((projects) => {
+            if (projects) setProjectDetails(projects);
+        });
+}

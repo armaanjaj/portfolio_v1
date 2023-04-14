@@ -118,7 +118,7 @@ function Contact() {
                                     duration: 1,
                                     delay: 0.3,
                                     type: "spring",
-                                }} className="font-bold">Let's talk</motion.div>
+                                }} className="font-bold">Let&apos;s talk</motion.div>
                         <motion.div
                             initial={{
                                 opacity: 0,

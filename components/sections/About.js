@@ -79,7 +79,7 @@ function About() {
                         <span className="text-[#EBB700]">Kotlin</span>,{" "}
                         <span className="text-[#EBB700]">PL/SQL</span>,{" "}
                         <span className="text-[#EBB700]">PHP</span> and{" "}
-                        <span className="text-[#EBB700]">Language 'C'</span>.
+                        <span className="text-[#EBB700]">Language &lsquo;C&rsquo;</span>.
                     </motion.p>
                     <motion.p
                         initial={{
