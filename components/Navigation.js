@@ -80,7 +80,7 @@ function Hamburger() {
                             >
                                 <a
                                     className="text-[3rem] font-bold no-underline hover:scale-[200%]"
-                                    href="#projects"
+                                    href="/projects"
                                 >
                                     Projects
                                 </a>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function About() {
     return (
-        <div id="aboutme">
+        <section id="aboutme">
             <div className="flex flex-row justify-between items-center mt-[7rem] mobile:text-[1.5rem] tablet:text-[1.5rem] laptop:text-[3rem] desktop:text-[3rem] font-bold w-[100%]">
                 <motion.div
                     initial={{
@@ -176,7 +176,7 @@ function About() {
                     />
                 </motion.div>
             </div>
-        </div>
+        </section>
     );
 }
 

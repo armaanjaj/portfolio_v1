@@ -10,7 +10,7 @@ import Contact from "@/components/sections/Contact";
 import { useEffect, useState } from "react";
 import Meta from "@/components/Meta";
 import allProjects from "../data/projectData/index.json";
-import allSkills from "../data/skillData/index.json"
+import allSkills from "../data/skillData/index.json";
 
 export default function Home() {
     const [projects, setProjects] = useState([]);
@@ -30,7 +30,7 @@ export default function Home() {
     };
 
     return (
-        <>
+        <main>
             <Meta />
             <Navigation />
             <Hero />
@@ -40,6 +40,6 @@ export default function Home() {
                 <Skills skills={skills} />
                 <Contact />
             </div>
-        </>
+        </main>
     );
 }

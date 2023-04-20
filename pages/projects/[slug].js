@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "../../styles/index.module.css";
 import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
-import OpenInBrowserIcon from "@mui/icons-material/OpenInBrowser";
+import LinkIcon from "@mui/icons-material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +20,7 @@ function SlugPage() {
         const { slug } = router.query;
         getProjectDetails(slug);
     }, [router.isReady]);
-    
+
     const getProjectDetails = (slug) => {
         allProjects.map((project) => {
             if (project.slug === slug) {
@@ -33,8 +33,29 @@ function SlugPage() {
         <div className="mt-[60px]">
             <div className={styles.container}>
                 <div className="flex flex-col justify-center items-start gap-10">
-                    <div className="text-[3rem] font-semibold">
-                        {projectDetails?.title}
+                    <div className="flex flex-row justify-between items-center w-full">
+                        <div className="flex flex-row justify-between items-center gap-5">
+                            <div className="text-[3rem] font-semibold">
+                                {projectDetails?.title}
+                            </div>
+                            {(projectDetails.links?.hosted ?? false) && (
+                                <Link
+                                    target="_blank"
+                                    href={projectDetails.links.hosted}
+                                >
+                                    <LinkIcon />
+                                </Link>
+                            )}
+                        </div>
+                        <div>
+                            <Link
+                                className="flex flex-row justify-center items-center border-solid border-[1px] border-[#350078] rounded-[8px] mobile:text-[0.85rem] tablet:text-[1rem] laptop:text-[1rem] desktop:text-[1rem] mobile:py-1 mobile:px-5 tablet:py-3 tablet:px-10 laptop:py-3 laptop:px-10 desktop:py-3 desktop:px-10"
+                                href={"/projects"}
+                            >
+                                {" "}
+                                See all<span className="mobile:hidden tablet:block laptop:block desktop:block">&nbsp;Projects</span>
+                            </Link>
+                        </div>
                     </div>
                     <div className="flex flex-row justify-between items-center mobile:text-[1.5rem] tablet:text-[1.5rem] laptop:text-[2rem] desktop:text-[2rem] font-bold w-[100%]">
                         <motion.div
@@ -275,7 +296,7 @@ function SlugPage() {
                                         target="_blank"
                                         href={projectDetails.links.hosted}
                                     >
-                                        <OpenInBrowserIcon />
+                                        <LinkIcon />
                                     </Link>
                                 )}
                             </div>
@@ -368,17 +389,17 @@ function SlugPage() {
 
 export default SlugPage;
 
-function getProjectDetails(slug) {
-    fetch(`/api/getProject?slug=${slug}`, {
-        credentials: "same-origin",
-        mode: "cors",
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-        },
-    })
-        .then((projects) => projects.json())
-        .then((projects) => {
-            if (projects) setProjectDetails(projects);
-        });
-}
+// function getProjectDetails(slug) {
+//     fetch(`/api/getProject?slug=${slug}`, {
+//         credentials: "same-origin",
+//         mode: "cors",
+//         method: "GET",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//     })
+//         .then((projects) => projects.json())
+//         .then((projects) => {
+//             if (projects) setProjectDetails(projects);
+//         });
+// }

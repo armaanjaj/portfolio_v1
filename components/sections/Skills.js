@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function Skills({ skills }) {
     return (
-        <div id="skills">
+        <section id="skills">
             <div className="flex flex-row justify-between items-center mt-[7rem] mobile:text-[1.5rem] tablet:text-[1.5rem] laptop:text-[3rem] desktop:text-[3rem] font-bold w-[100%]">
                 <motion.div
                     initial={{
@@ -75,7 +75,7 @@ function Skills({ skills }) {
                     </motion.div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 }
 
