@@ -3,6 +3,7 @@ import DehazeIcon from "@mui/icons-material/Dehaze";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
 import styles from "@/styles/index.module.css";
+import Link from "next/link";
 
 function Hamburger() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -78,12 +79,12 @@ function Hamburger() {
                                 className="mb-4 text-center"
                                 variants={menuItemVariants}
                             >
-                                <a
+                                <Link
                                     className="text-[3rem] font-bold no-underline hover:scale-[200%]"
                                     href="/projects"
                                 >
                                     Projects
-                                </a>
+                                </Link>
                             </motion.div>
                             <motion.div
                                 className="mb-4 text-center"

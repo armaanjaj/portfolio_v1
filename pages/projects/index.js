@@ -6,7 +6,7 @@ import allProjects from "@/data/projectData/index.json";
 import HomeOutlinedIcon from "@mui/icons-material/HomeRounded";
 import Link from "next/link";
 
-function index() {
+function Home() {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {

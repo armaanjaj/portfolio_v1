@@ -19,7 +19,7 @@ function SlugPage() {
 
         const { slug } = router.query;
         getProjectDetails(slug);
-    }, [router.isReady]);
+    }, [router.isReady, router.query]);
 
     const getProjectDetails = (slug) => {
         allProjects.map((project) => {
