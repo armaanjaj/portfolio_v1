@@ -1,7 +1,7 @@
 [
     {
         "title": "Portfolio",
-        "slug":"portfolio",
+        "slug": "portfolio",
         "overview": "This is the new version of my portfolio website created using Next.js framework.",
         "type": "Website",
         "timeline": {
@@ -12,16 +12,19 @@
             "name": "Personal project"
         },
         "stack": [
-            "Next.js", "React.js", "Node.js", "Tailwind"
+            "Next.js",
+            "React.js",
+            "Node.js",
+            "Tailwind"
         ],
         "links": {
             "github": "https://github.com/armaanjaj/portfolio_v2",
             "hosted": "https://www.armaancodes.com/"
         },
-        "images":[
+        "images": [
             {
-                "path":"/projects/portfolio/home.png",
-                "alt":"Image showing the home page of the portfolio website."
+                "path": "/projects/portfolio/home.png",
+                "alt": "Image showing the home page of the portfolio website."
             }
         ]
     },
@@ -127,7 +130,21 @@
         "links": {
             "github": "https://github.com/armaanjaj/connect",
             "hosted": false
-        }
+        },
+        "images": [
+            {
+                "path": "/projects/connect/home.png",
+                "alt": "Image showing the home screen of connect web application."
+            },
+            {
+                "path": "/projects/connect/chat-1.png",
+                "alt": "Image showing one of the chat's screen in connect web application."
+            },
+            {
+                "path": "/projects/connect/signup.png",
+                "alt": "Image showing the signup page of connect web application."
+            }
+        ]
     },
     {
         "title": "MyInventory",

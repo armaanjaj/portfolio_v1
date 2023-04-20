@@ -16,5 +16,19 @@
     "links":{
         "github":"https://github.com/armaanjaj/connect",
         "hosted":false
-    }
+    },
+    "images":[
+        {
+            "path":"/projects/connect/home.png",
+            "alt":"Image showing the home screen of connect web application."
+        },
+        {
+            "path":"/projects/connect/chat-1.png",
+            "alt":"Image showing one of the chat's screen in connect web application."
+        },
+        {
+            "path":"/projects/connect/signup.png",
+            "alt":"Image showing the signup page of connect web application."
+        }
+    ]
 }
