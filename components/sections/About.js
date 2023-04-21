@@ -144,7 +144,7 @@ function About() {
                         <span className="text-[#EBB700] font-bold">Kotlin</span>,{" "}
                         <span className="text-[#EBB700] font-bold">PL/SQL</span>,{" "}
                         <span className="text-[#EBB700] font-bold">PHP</span>, and{" "}
-                        <span className="text-[#EBB700] font-bold">Language 'C.'</span> I
+                        <span className="text-[#EBB700] font-bold">Language &lsquo;C.&rsquo;</span> I
                         have a strong foundation in creating websites and focus
                         on providing the best user experience through intuitive
                         design.{" "}
