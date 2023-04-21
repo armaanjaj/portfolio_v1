@@ -70,7 +70,7 @@ function About() {
                         Greetings! I am Armaan, and I am passionate about
                         creating things. My love for creation began at an early
                         age, where I would often be found sketching and drawing.
-                        Though I haven't had much time for sketching in the past
+                        Though I haven&apos;t had much time for sketching in the past
                         two years due to my studies in software development, I
                         have found that my passion for design has transformed
                         into a digital form.{" "}
@@ -170,7 +170,7 @@ function About() {
                     >
                         Thank you for taking the time to get to know me a little
                         better. If you have any questions or are interested in
-                        working together, please don't hesitate to reach out.
+                        working together, please don&apos;t hesitate to reach out.
                     </motion.p>
                 </div>
                 <motion.div
