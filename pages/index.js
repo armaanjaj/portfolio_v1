@@ -26,7 +26,7 @@ export default function Home() {
     };
 
     const getAllSkills = () => {
-        setSkills(allSkills.reverse().map((skill) => skill));
+        setSkills(allSkills.sort((a, b) => a.index - b.index).map((skill) => skill));
     };
 
     return (

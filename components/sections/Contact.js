@@ -74,7 +74,7 @@ function Contact() {
                 ></motion.div>
             </div>
             <div className="flex flex-col justify-center items-center mobile:mt-[2rem] tablet:mt-[2rem] laptop:mt-[5rem] desktop:mt-[5rem] gap-10">
-                <div className="mobile:w-[100%] tablet:w-[100%] laptop:w-[50%] desktop:w-[50%] text-[1.5rem]">
+                <div className="mobile:w-[100%] tablet:w-[100%] laptop:w-[50%] desktop:w-[50%] text-[1rem]">
                     <motion.p
                         initial={{
                             opacity: 0,

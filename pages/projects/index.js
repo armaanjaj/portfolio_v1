@@ -11,11 +11,16 @@ function Home() {
 
     useEffect(() => {
         getAllProjects();
+        setTitle();
     }, []);
 
     const getAllProjects = () => {
         setProjects(allProjects.map((project) => project));
     };
+
+    const setTitle = () =>{
+        document.title = "Projects | armaancodes.com"
+    }
 
     return (
         <div className="mt-[60px]">
@@ -84,7 +89,7 @@ function Home() {
                             href={"/"}
                         >
                             {" "}
-                            Home{" "}
+                            Return to home{" "}
                         </Link>
                     </motion.div>
                 </div>

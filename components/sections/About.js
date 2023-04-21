@@ -48,7 +48,7 @@ function About() {
                 ></motion.div>
             </div>
             <div className="flex justify-between items-start mobile:mt-[2rem] tablet:mt-[2rem] laptop:mt-[5rem] desktop:mt-[5rem] mobile:flex-col tablet:flex-col laptop:flex-row desktop:flex-row">
-                <div className="mobile:w-[100%] tablet:w-[100%] laptop:w-[50%] desktop:w-[50%] mobile:text-[1.5rem] tablet:text-[1rem] laptop:text-[1.3rem] desktop:text-[1.3rem]">
+                <div className="mobile:w-[100%] tablet:w-[100%] laptop:w-[50%] desktop:w-[50%] text-[1rem]">
                     <motion.p
                         initial={{
                             opacity: 0,
@@ -67,20 +67,15 @@ function About() {
                             delay: 0.5,
                         }}
                     >
-                        As a recent graduate with a strong foundation in a
-                        variety of programming languages and frameworks, I
-                        <span className="text-[#EBB700]"> specialize</span> in
-                        full stack development and have experience working with
-                        languages such as{" "}
-                        <span className="text-[#EBB700]">JavaScript</span>,{" "}
-                        <span className="text-[#EBB700]">TypeScript</span>,
-                        <span className="text-[#EBB700]">Java</span>,{" "}
-                        <span className="text-[#EBB700]">Python</span>,{" "}
-                        <span className="text-[#EBB700]">Kotlin</span>,{" "}
-                        <span className="text-[#EBB700]">PL/SQL</span>,{" "}
-                        <span className="text-[#EBB700]">PHP</span> and{" "}
-                        <span className="text-[#EBB700]">Language &lsquo;C&rsquo;</span>.
+                        Greetings! I am Armaan, and I am passionate about
+                        creating things. My love for creation began at an early
+                        age, where I would often be found sketching and drawing.
+                        Though I haven't had much time for sketching in the past
+                        two years due to my studies in software development, I
+                        have found that my passion for design has transformed
+                        into a digital form.{" "}
                     </motion.p>
+                    <br />
                     <motion.p
                         initial={{
                             opacity: 0,
@@ -96,48 +91,86 @@ function About() {
                         }}
                         transition={{
                             duration: 0.5,
-                            delay: 0.4,
+                            delay: 0.6,
                         }}
                     >
-                        Additionally, I have expertise in JavaScript frameworks
-                        such as <span className="text-[#EBB700]">React.js</span>{" "}
-                        and <span className="text-[#EBB700]">Node.js</span>.
-                    </motion.p>
-                    <motion.p
-                        initial={{
-                            opacity: 0,
-                            y: 10,
-                        }}
-                        whileInView={{
-                            opacity: 1,
-                            y: 0,
-                        }}
-                        viewport={{
-                            once: true,
-                            amount: 1,
-                        }}
-                        transition={{
-                            duration: 0.5,
-                            delay: 0.3,
-                        }}
-                    >
-                        In addition to{" "}
+                        My interest in web development began when I discovered
+                        my love for designing websites and creating intuitive
+                        user experiences. Since then, I have been developing
+                        modern and clean websites using frameworks such as{" "}
+                        <span className="text-[#EBB700] font-bold">Next.js</span>,{" "}
+                        <span className="text-[#EBB700] font-bold">React.js</span> and{" "}
+                        <span className="text-[#EBB700] font-bold">Node.js</span>. I am
+                        also well-versed in{" "}
                         <span className="text-[#EBB700] font-bold">
-                            full stack development
-                        </span>
-                        , I have a strong grasp of important concepts such as{" "}
-                        <span className="text-[#EBB700]">
                             object-oriented programming
                         </span>
                         ,{" "}
-                        <span className="text-[#EBB700]">
-                            data structures and algorithms
+                        <span className="text-[#EBB700] font-bold">
+                            data structures and alogrithms
                         </span>
-                        , and{" "}
-                        <span className="text-[#EBB700]">
+                        , and continuously strive to improve my knowledge in the
+                        field of{" "}
+                        <span className="text-[#EBB700] font-bold">
                             user experience design
                         </span>
                         .
+                    </motion.p>
+                    <br />
+                    <motion.p
+                        initial={{
+                            opacity: 0,
+                            y: 10,
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                        }}
+                        viewport={{
+                            once: true,
+                            amount: 1,
+                        }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.7,
+                        }}
+                    >
+                        As a recent graduate, I specialize in full stack
+                        development, with expertise in languages such as{" "}
+                        <span className="text-[#EBB700] font-bold">JavaScript</span>,{" "}
+                        <span className="text-[#EBB700] font-bold">TypeScript</span>,{" "}
+                        <span className="text-[#EBB700] font-bold">Java</span>,{" "}
+                        <span className="text-[#EBB700] font-bold">Python</span>,{" "}
+                        <span className="text-[#EBB700] font-bold">Kotlin</span>,{" "}
+                        <span className="text-[#EBB700] font-bold">PL/SQL</span>,{" "}
+                        <span className="text-[#EBB700] font-bold">PHP</span>, and{" "}
+                        <span className="text-[#EBB700] font-bold">Language 'C.'</span> I
+                        have a strong foundation in creating websites and focus
+                        on providing the best user experience through intuitive
+                        design.{" "}
+                    </motion.p>
+                    <br />
+                    <motion.p
+                        initial={{
+                            opacity: 0,
+                            y: 10,
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                        }}
+                        viewport={{
+                            once: true,
+                            amount: 1,
+                        }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.8,
+                        }}
+                    >
+                        Thank you for taking the time to get to know me a little
+                        better. If you have any questions or are interested in
+                        working together, please don't hesitate to reach out.
                     </motion.p>
                 </div>
                 <motion.div
