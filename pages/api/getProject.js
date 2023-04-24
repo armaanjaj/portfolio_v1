@@ -2,7 +2,7 @@ import * as fs from "fs";
 
 export default function getProject(req, res) {
     fs.readFile(
-        `data/projectData/${req.query.slug}.json`,
+        path.join(process.cwd(), `data/projectData/projects/${req.query.slug}.json`),
         "utf-8",
         (error, data) => {
             if (error) {

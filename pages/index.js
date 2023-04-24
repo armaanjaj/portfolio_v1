@@ -9,39 +9,59 @@ import Skills from "@/components/sections/Skills";
 import Contact from "@/components/sections/Contact";
 import { useEffect, useState } from "react";
 import Meta from "@/components/Meta";
-import allProjects from "../data/projectData/index.json";
-import allSkills from "../data/skillData/index.json";
 import useAxios from "@/hooks/useAxios";
 
+// UNCOMMENT IF READING FILES LOCALLY
+// import allProjects from "../data/projectData/index.json";
+// import allSkills from "../data/skillData/index.json";
+
 export default function Home() {
+
+    // STATES
     const [projects, setProjects] = useState([]);
     const [skills, setSkills] = useState([]);
 
-    const getAllProjects = () => {
-        setProjects(allProjects.map((project) => project));
-    };
+    // -------------- CODE TO GET DATA OVER API ----------------- START
     
-    const { response, error } = useAxios({
+    const { allProjects, projectErr } = useAxios({
+        method: 'get',
+        url: '/api/getProjects',
+        headers: JSON.stringify({ accept: '*/*' }),
+    });
+    const { allSkills, skillErr } = useAxios({
         method: 'get',
         url: '/api/getSkills',
         headers: JSON.stringify({ accept: '*/*' }),
     });
     
+    
+    useEffect(() => {
+        if (allProjects !== null) {
+            setProjects(allProjects);
+        }
+        if (allSkills !== null) {
+            setSkills(allSkills);
+        }
+    }, [allSkills, allProjects]);
+
+    // ----------------------------------------------------------- END
+
+
+    // -------------- CODE TO READ FILES LOCALLY ----------------- START
+
     // useEffect(() => {
     //     getAllProjects();
     //     getAllSkills();
     // }, []);
     
-    useEffect(() => {
-        getAllProjects();
-        if (response !== null) {
-            setSkills(response);
-        }
-    }, [response]);
-
+    // const getAllProjects = () => {
+    //     setProjects(allProjects.map((project) => project));
+    // };
     // const getAllSkills = () => {
     //     setSkills(allSkills.sort((a, b) => a.index - b.index).map((skill) => skill));
     // };
+
+    // ----------------------------------------------------------- END
 
     return (
         <main>
