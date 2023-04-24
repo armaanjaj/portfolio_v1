@@ -107,7 +107,7 @@ function Hero() {
                                 className="flex flex-row justify-center items-center w-full px-[1rem] py-[0.50rem] bg-[#EBB700] rounded-[8px] font-bold hover:cursor-pointer"
                             >
                                 <Link href={"mailto:armaan.jaj@gmail.com"}>
-                                    Get in touch
+                                    Contact me
                                 </Link>
                             </motion.div>
 

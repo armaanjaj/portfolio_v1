@@ -58,7 +58,7 @@ function Hamburger() {
             >
                 <div>
                     <div className={styles.container}>
-                        <div className="text-[#8f33ff] mt-[60px] hover:cursor-pointer" onClick={toggleMenu}>
+                        <div className="text-[#8f33ff] mt-[60px] hover:cursor-pointer w-fit" onClick={toggleMenu}>
                             <CloseIcon className="scale-[150%]" />
                         </div>
                     </div>

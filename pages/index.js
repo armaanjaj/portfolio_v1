@@ -23,12 +23,12 @@ export default function Home() {
 
     // -------------- CODE TO GET DATA OVER API ----------------- START
     
-    const { allProjects, projectErr } = useAxios({
+    const projectData = useAxios({
         method: 'get',
         url: '/api/getProjects',
         headers: JSON.stringify({ accept: '*/*' }),
     });
-    const { allSkills, skillErr } = useAxios({
+    const skillData = useAxios({
         method: 'get',
         url: '/api/getSkills',
         headers: JSON.stringify({ accept: '*/*' }),
@@ -36,13 +36,11 @@ export default function Home() {
     
     
     useEffect(() => {
-        if (allProjects !== null) {
-            setProjects(allProjects);
-        }
-        if (allSkills !== null) {
-            setSkills(allSkills);
-        }
-    }, [allSkills, allProjects]);
+        if (projectData.response !== null) setProjects(projectData.response);
+        if(projectData.error) console.log(projectData.error)
+        if (skillData.response !== null) setSkills(skillData.response);
+        if(skillData.error) console.log(skillData.error)
+    }, [projectData, skillData]);
 
     // ----------------------------------------------------------- END
 

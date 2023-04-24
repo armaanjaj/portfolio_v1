@@ -188,7 +188,7 @@ function About() {
                     }}
                     transition={{
                         duration: 0.5,
-                        delay: 0.1,
+                        delay: 0.9,
                     }}
                 >
                     <Image
