@@ -8,7 +8,7 @@ export default async function getProjects(req, res) {
     let skills;
     for (let index = 0; index < data.length; index++) {
         const item = data[index];
-        skills = await fs.promises.readFile(path.join(process.cwd(), '/data/skillData/skills') + item, "utf-8");
+        skills = await fs.promises.readFile(path.join(process.cwd(), '/data/skillData/skills/') + item, "utf-8");
         allSkills.push(JSON.parse(skills));
     }
 
