@@ -5,6 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import allProjects from "@/data/projectData/index.json";
 import HomeOutlinedIcon from "@mui/icons-material/HomeRounded";
 import Link from "next/link";
+import Meta from "@/components/Meta";
 
 function Home() {
     const [projects, setProjects] = useState([]);
@@ -23,6 +24,8 @@ function Home() {
     }
 
     return (
+        <>
+        <Meta/>
         <div className="mt-[60px]">
             <div className={styles.container}>
                 <div className="flex flex-row justify-between items-center gap-10">
@@ -95,6 +98,7 @@ function Home() {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 
