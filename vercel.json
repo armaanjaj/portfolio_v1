@@ -1,20 +1,4 @@
 {
-    "builds": [
-        {
-            "src": "next.config.js",
-            "use": "@vercel/next"
-        },
-        {
-            "src": "api/*.js",
-            "use": "@vercel/node"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/api/(.*)",
-            "dest": "/api/$1"
-        }
-    ],
     "files": [
         "data/**/*"
     ]
