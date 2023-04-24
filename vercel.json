@@ -1,0 +1,16 @@
+{
+    "functions": {
+        "pages/api/getProjects.js": {
+            "memory": 1024,
+            "maxDuration": 10
+        },
+        "pages/api/getProject.js": {
+            "memory": 1024,
+            "maxDuration": 10
+        },
+        "pages/api/getSkills.js": {
+            "memory": 1024,
+            "maxDuration": 10
+        }
+    }
+}
