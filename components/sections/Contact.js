@@ -4,6 +4,7 @@ import Link from "next/link";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import MailIcon from "@mui/icons-material/Mail";
 
 function Contact() {
     const [name, setName] = useState("");
@@ -137,8 +138,11 @@ function Contact() {
                                 delay: 0.5,
                                 type: "spring",
                             }}
-                            className="flex flex-row justify-center items-center px-[1rem] py-[0.50rem] bg-[#350078] rounded-[8px] text-[1rem] font-bold hover:cursor-pointer"
+                            className="gap-3 flex flex-row justify-center items-center px-[1rem] py-[0.50rem] bg-[#350078] rounded-[8px] text-[1rem] font-bold hover:cursor-pointer"
                         >
+                                <div>
+                                    <MailIcon/>
+                                </div>
                             <Link href={"mailto:armaan.jaj@gmail.com"}>
                                 Get in touch
                             </Link>
