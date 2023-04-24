@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import Meta from "@/components/Meta";
 import allProjects from "../data/projectData/index.json";
 import allSkills from "../data/skillData/index.json";
+import useAxios from "@/hooks/useAxios";
 
 export default function Home() {
     const [projects, setProjects] = useState([]);
