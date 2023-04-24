@@ -23,7 +23,7 @@ export default function Home() {
     
     const { response, error } = useAxios({
         method: 'get',
-        url: '/getSkills',
+        url: '/api/getSkills',
         headers: JSON.stringify({ accept: '*/*' }),
     });
     

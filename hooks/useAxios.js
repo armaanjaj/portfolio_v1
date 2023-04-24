@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://portfolio.vercel.app/api/";
+// axios.defaults.baseURL = "https://portfolio.vercel.app/api/";
 
 const useAxios = ({ url, method, body = null, headers = null }) => {
     const [response, setResponse] = useState(null);
