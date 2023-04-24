@@ -1,4 +1,5 @@
 import * as fs from "fs";
+import path from "path";
 
 export default async function getProjects(req, res) {
     let data = await fs.promises.readdir(path.join(process.cwd(), '/data/projectData/projects'));
