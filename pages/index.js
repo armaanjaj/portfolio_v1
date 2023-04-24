@@ -16,18 +16,31 @@ export default function Home() {
     const [projects, setProjects] = useState([]);
     const [skills, setSkills] = useState([]);
 
-    useEffect(() => {
-        getAllProjects();
-        getAllSkills();
-    }, []);
-
     const getAllProjects = () => {
         setProjects(allProjects.map((project) => project));
     };
+    
+    const { response, error } = useAxios({
+        method: 'get',
+        url: '/api/getSkills',
+        headers: JSON.stringify({ accept: '*/*' }),
+    });
+    
+    // useEffect(() => {
+    //     getAllProjects();
+    //     getAllSkills();
+    // }, []);
+    
+    useEffect(() => {
+        getAllProjects();
+        if (response !== null) {
+            setSkills(response);
+        }
+    }, [response]);
 
-    const getAllSkills = () => {
-        setSkills(allSkills.sort((a, b) => a.index - b.index).map((skill) => skill));
-    };
+    // const getAllSkills = () => {
+    //     setSkills(allSkills.sort((a, b) => a.index - b.index).map((skill) => skill));
+    // };
 
     return (
         <main>
