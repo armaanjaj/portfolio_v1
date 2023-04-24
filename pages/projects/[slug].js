@@ -39,10 +39,14 @@ function SlugPage() {
                         ? projectDetails.title + " | Projects"
                         : "Projects"
                 }
-                keywords={
-                    "web dev, web development, web development articles, web development blogs, web development portfolio, portfolio website"
+                seoTitle={
+                    projectDetails?.title
+                        ? projectDetails.title + " | Projects"
+                        : "Projects"
                 }
                 description="Check out all web or mobile application projects on armaancodes.com."
+                seoDescription="Check out all web or mobile application projects on armaancodes.com."
+                seoURL={("https://www.armaancodes.com/projects"+`/${projectDetails.title}`)}
             />
             <div className="mt-[60px]">
                 <div className={styles.container}>
