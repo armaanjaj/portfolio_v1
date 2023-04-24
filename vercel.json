@@ -1,13 +1,21 @@
 {
-    "functions": {
-        "api/getProjects.js": {
-            "memory": 512
+    "builds": [
+        {
+            "src": "next.config.js",
+            "use": "@vercel/next"
         },
-        "api/getProject.js": {
-            "memory": 512
-        },
-        "api/getSkills.js": {
-            "memory": 512
+        {
+            "src": "api/*.js",
+            "use": "@vercel/node"
         }
-    }
+    ],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/$1"
+        }
+    ],
+    "files": [
+        "data/**/*"
+    ]
 }
