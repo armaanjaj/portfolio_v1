@@ -25,7 +25,11 @@ function Home() {
 
     return (
         <>
-        <Meta/>
+        <Meta
+         title={"Projects | armaancodes.com"}
+         seoTitle={"Projects | armaancodes.com"}
+         seoURL={"https://www.armaancodes.com/projects"}
+        />
         <div className="mt-[60px]">
             <div className={styles.container}>
                 <div className="flex flex-row justify-between items-center gap-10">
