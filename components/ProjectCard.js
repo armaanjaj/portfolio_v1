@@ -15,7 +15,7 @@ function ProjectCard({ title, slug, overview, stack, links }) {
                 </div>
             </Link>
             <div className="flex flex-row justify-between items-center">
-                {stack.map((item, i) => (
+                {stack.slice(0, 3).map((item, i) => (
                     <div key={i} className="text-[12px] text-[#a4a4a4]">
                         {item}
                     </div>

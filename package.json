@@ -20,6 +20,7 @@
     "framer-motion": "^10.11.6",
     "http-proxy-middleware": "^2.0.6",
     "next": "13.2.4",
+    "node-cache": "^5.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

@@ -6,22 +6,34 @@ import allProjects from "@/data/projectData/index.json";
 import HomeOutlinedIcon from "@mui/icons-material/HomeRounded";
 import Link from "next/link";
 import Meta from "@/components/Meta";
+import useAxios from "@/hooks/useAxios";
 
 function Home() {
     const [projects, setProjects] = useState([]);
 
-    useEffect(() => {
-        getAllProjects();
-        setTitle();
-    }, []);
+    const projectData = useAxios({
+        method: 'get',
+        url: '/api/getProjects',
+        headers: JSON.stringify({ accept: '*/*' }),
+    });
 
-    const getAllProjects = () => {
-        setProjects(allProjects.map((project) => project));
-    };
+    useEffect(() => {
+        if (projectData.response !== null) setProjects(projectData.response);
+        setTitle();
+    }, [projectData]);
 
     const setTitle = () =>{
         document.title = "Projects | armaancodes.com"
     }
+    
+    // ----------------- IF READING PROJECTS FROM FILE --------------------------
+    
+    // const getAllProjects = () => {
+    //     setProjects(allProjects.map((project) => project));
+    // };
+    
+    // ----------------- IF READING PROJECTS FROM FILE --------------------------
+    
 
     return (
         <>

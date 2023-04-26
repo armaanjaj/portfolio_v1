@@ -1,0 +1,159 @@
+[
+    {
+        "repo_name": "age-in-minutes",
+        "title": "Age Calculator",
+        "slug": "age-calculator",
+        "type": "Mobile/Android",
+        "timeline": {
+            "startDate": "5 October 2022",
+            "endDate": "6 October 2022"
+        },
+        "associated": {
+            "name": "Southern Alberta Institute of Technology"
+        },
+        "stack": [
+            "Kotlin",
+            "Android Studio"
+        ],
+        "links":{
+            "github":"",
+            "hosted":false
+        },
+        "images": [
+            {
+                "path": "/projects/agecalculator/home.png",
+                "alt": "Image showing the entry screen of age calculator mobile application."
+            }
+        ]
+    },
+    {
+        "repo_name": "Connect",
+        "title": "Connect",
+        "slug": "connect",
+        "type": "Web application",
+        "timeline": {
+            "startDate": "26 September 2022",
+            "endDate": "27 September 2022"
+        },
+        "associated": {
+            "name": "Personal project"
+        },
+        "stack": [
+            "PHP",
+            "JavaScript",
+            "XHRHttpRequest"
+        ],
+        "links":{
+            "github":"",
+            "hosted":false
+        },
+        "images": [
+            {
+                "path": "/projects/connect/home.png",
+                "alt": "Image showing the home screen of connect web application."
+            },
+            {
+                "path": "/projects/connect/chat-1.png",
+                "alt": "Image showing one of the chat's screen in connect web application."
+            },
+            {
+                "path": "/projects/connect/signup.png",
+                "alt": "Image showing the signup page of connect web application."
+            }
+        ]
+    },
+    {
+        "repo_name": "myinventory",
+        "title": "MyInventory",
+        "slug": "myinventory",
+        "type": "Web application",
+        "timeline": {
+            "startDate": "17 September 2022",
+            "endDate": false
+        },
+        "associated": {
+            "name": "Personal project"
+        },
+        "stack": [
+            "React.js",
+            "Node.js",
+            "MySQL"
+        ],
+        "links":{
+            "github":"",
+            "hosted":false
+        },
+        "images": [
+            {
+                "path": "/projects/myinventory/inventory.png",
+                "alt": "Image showing the inventory page of myinventory web application."
+            }
+        ]
+    },
+    {
+        "repo_name": "portfolio_v2",
+        "title": "Portfolio",
+        "slug": "portfolio",
+        "type": "Website",
+        "timeline": {
+            "startDate": "06 April 2023",
+            "endDate": "13 April 2023"
+        },
+        "associated": {
+            "name": "Personal project"
+        },
+        "stack": [
+            "Next.js",
+            "React.js",
+            "Node.js",
+            "Tailwind"
+        ],
+        "links":{
+            "github":"",
+            "hosted":false
+        },
+        "images": [
+            {
+                "path": "/projects/portfolio/home.png",
+                "alt": "Image showing the home page of the portfolio website."
+            }
+        ]
+    },
+    {
+        "repo_name": "Wedd-Fullstack-application",
+        "title": "WeDD",
+        "slug": "wedd",
+        "type": "Web application",
+        "timeline": {
+            "startDate": "28 October 2022",
+            "endDate": "16 December 2022"
+        },
+        "associated": {
+            "name": "Southern Alberta Institute of Technology"
+        },
+        "stack": [
+            "React.js",
+            "Node.js",
+            "MySQL",
+            "Express"
+        ],
+        "links": {
+            "github": "",
+            "hosted": false
+        },
+        "images": [
+            {
+                "path": "/projects/wedd/home.png",
+                "alt": "Image showing the home page wedd web application."
+            },
+            {
+                "path": "/projects/wedd/login.png",
+                "alt": "Image showing the login page wedd web application."
+            },
+            {
+                "path": "/projects/wedd/signup.png",
+                "alt": "Image showing the signup page wedd web application."
+            }
+        ]
+    }
+]
