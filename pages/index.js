@@ -6,7 +6,7 @@ import Projects from "@/components/sections/Projects";
 import Skills from "@/components/sections/Skills";
 import Contact from "@/components/sections/Contact";
 import Meta from "@/components/Meta";
-import useAxios from "@/hooks/useAxios";
+import axios from "axios";
 
 // UNCOMMENT IF READING FILES LOCALLY
 // import allProjects from "../data/projectData/index.json";
@@ -30,21 +30,28 @@ export default function Home({ projects, skills }) {
 }
 
 export async function getServerSideProps() {
-    const projectData = useAxios({
-        method: 'get',
-        url: '/api/getProjects',
-        headers: JSON.stringify({ accept: '*/*' }),
-    });
-    const skillData = useAxios({
-        method: 'get',
-        url: '/api/getSkills',
-        headers: JSON.stringify({ accept: '*/*' }),
-    });
-    const [projects, skills] = await Promise.all([projectData, skillData]);
+  try {
+    const [projectRes, skillRes] = await Promise.all([
+      axios.get("https://your-api.com/projects"),
+      axios.get("https://your-api.com/skills"),
+    ]);
+
+    const projects = projectRes.data;
+    const skills = skillRes.data;
+
     return {
-        props: {
-            projects: projects.response,
-            skills: skills.response
-        }
+      props: {
+        projects,
+        skills,
+      },
     };
+  } catch (error) {
+    console.log(error);
+    return {
+      props: {
+        projects: [],
+        skills: [],
+      },
+    };
+  }
 }
