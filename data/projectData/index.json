@@ -1,92 +1,8 @@
 [
     {
-        "title": "Portfolio",
-        "slug": "portfolio",
-        "overview": "This is the new version of my portfolio website created using Next.js framework.",
-        "type": "Website",
-        "timeline": {
-            "startDate": "06 April 2023",
-            "endDate": "13 April 2023"
-        },
-        "associated": {
-            "name": "Personal project"
-        },
-        "stack": [
-            "Next.js",
-            "React.js",
-            "Node.js",
-            "Tailwind"
-        ],
-        "links": {
-            "github": "https://github.com/armaanjaj/portfolio_v2",
-            "hosted": "https://www.armaancodes.com/"
-        },
-        "images": [
-            {
-                "path": "/projects/portfolio/home.png",
-                "alt": "Image showing the home page of the portfolio website."
-            }
-        ]
-    },
-    {
-        "title": "WeDD.ca",
-        "slug": "wedd",
-        "overview": "For our capstone project, we developed a ride booking service for a company called WeDD. It was developed using React.js, Express.js, Node.js and MySQL database. WeDD is a multiuser and multi-role application where customers, drivers and administrators can interact and use features their role allows them, simultaneously.",
-        "type": "Web application",
-        "timeline": {
-            "startDate": "28 October 2022",
-            "endDate": "16 December 2022"
-        },
-        "associated": {
-            "name": "Southern Alberta Institute of Technology"
-        },
-        "stack": [
-            "React.js",
-            "Node.js",
-            "MySQL",
-            "Express"
-        ],
-        "links": {
-            "github": "https://github.com/armaansinghjaj/Wedd-Fullstack-application",
-            "hosted": false
-        },
-        "contributors": [
-            {
-                "name": "Vaibhav Kumar",
-                "linkedin": "https://linkedin.com/in/vaibhavkumar"
-            },
-            {
-                "name": "Prince Bhagria",
-                "linkedin": "https://linkedin.com/in/vaibhavkumar"
-            },
-            {
-                "name": "Daniel Wong",
-                "linkedin": "https://linkedin.com/in/vaibhavkumar"
-            },
-            {
-                "name": "Shubhpreet Kaur",
-                "linkedin": "https://linkedin.com/in/vaibhavkumar"
-            }
-        ],
-        "images": [
-            {
-                "path": "/projects/wedd/home.png",
-                "alt": "Image showing the home page wedd web application."
-            },
-            {
-                "path": "/projects/wedd/login.png",
-                "alt": "Image showing the login page wedd web application."
-            },
-            {
-                "path": "/projects/wedd/signup.png",
-                "alt": "Image showing the signup page wedd web application."
-            }
-        ]
-    },
-    {
+        "repo_name": "age-in-minutes",
         "title": "Age Calculator",
         "slug": "age-calculator",
-        "overview": "A simple yet useful android app which converts your age into minutes. It offers you the feature to choose your date of birth, the month and the year from the calender. After you have selected the date and pressed OK, it will show you the results of your selection.",
         "type": "Mobile/Android",
         "timeline": {
             "startDate": "5 October 2022",
@@ -99,9 +15,9 @@
             "Kotlin",
             "Android Studio"
         ],
-        "links": {
-            "github": "https://github.com/armaanjaj/age-in-minutes",
-            "hosted": false
+        "links":{
+            "github":"",
+            "hosted":false
         },
         "images": [
             {
@@ -111,9 +27,9 @@
         ]
     },
     {
+        "repo_name": "Connect",
         "title": "Connect",
         "slug": "connect",
-        "overview": "Connect is a real time full stack chat application which runs on PHP. It is connected to the MySQL database for storing user's personal information and their messages. It uses JavaScript to handle user inputs on the front-end to send information to PHP through AJAX and update the front-end over frequent intervals of time.",
         "type": "Web application",
         "timeline": {
             "startDate": "26 September 2022",
@@ -127,9 +43,9 @@
             "JavaScript",
             "XHRHttpRequest"
         ],
-        "links": {
-            "github": "https://github.com/armaanjaj/connect",
-            "hosted": false
+        "links":{
+            "github":"",
+            "hosted":false
         },
         "images": [
             {
@@ -147,9 +63,9 @@
         ]
     },
     {
+        "repo_name": "myinventory",
         "title": "MyInventory",
         "slug": "myinventory",
-        "overview": "This is one of my full stack side projects. myinventory is an inventory managing web application, which is designed using JavaScript framework React.js for the front-end and Node.js which uses Express.js library for back-end. It uses MySQL to store users and their inventory information in the database.",
         "type": "Web application",
         "timeline": {
             "startDate": "17 September 2022",
@@ -163,14 +79,127 @@
             "Node.js",
             "MySQL"
         ],
-        "links": {
-            "github": "https://github.com/armaanjaj/myinventory",
-            "hosted": false
+        "links":{
+            "github":"",
+            "hosted":false
         },
         "images": [
             {
                 "path": "/projects/myinventory/inventory.png",
                 "alt": "Image showing the inventory page of myinventory web application."
+            }
+        ]
+    },
+    {
+        "repo_name": "portfolio_v2",
+        "title": "Portfolio",
+        "slug": "portfolio",
+        "type": "Website",
+        "timeline": {
+            "startDate": "06 April 2023",
+            "endDate": "13 April 2023"
+        },
+        "associated": {
+            "name": "Personal project"
+        },
+        "stack": [
+            "Next.js",
+            "React.js",
+            "Node.js",
+            "Tailwind"
+        ],
+        "links":{
+            "github":"",
+            "hosted":false
+        },
+        "images": [
+            {
+                "path": "/projects/portfolio/home.png",
+                "alt": "Image showing the home page of the portfolio website."
+            },
+            {
+                "path": "/projects/portfolio/projectPage.png",
+                "alt": "Image showing the page with should all the details about the project."
+            },
+            {
+                "path": "/projects/portfolio/allProjects.png",
+                "alt": "Image showing the page which shows all the projects in my protfolio."
+            }
+        ]
+    },
+    {
+        "repo_name": "Quizee",
+        "title": "Quizee",
+        "slug": "Quizee",
+        "type": "Mobile/Android",
+        "timeline": {
+            "startDate": "27 May 2023",
+            "endDate": false
+        },
+        "associated": {
+            "name": "Personal project"
+        },
+        "stack": [
+            "Kotlin",
+            "Android Studio"
+        ],
+        "links":{
+            "github":"",
+            "hosted":false
+        },
+        "images": [
+            {
+                "path": "/projects/quizee/home.png",
+                "alt": "Image showing the home page of the Quizz application."
+            },
+            {
+                "path": "/projects/quizee/quizScreen.png",
+                "alt": "Image showing the quiz page where user is able to see and answer the question."
+            },
+            {
+                "path": "/projects/quizee/submitAnswer.png",
+                "alt": "Image showing the page when user chooses and submits the answer."
+            },
+            {
+                "path": "/projects/quizee/endScreen.png",
+                "alt": "Image showing the page where they can see their score."
+            }
+        ]
+    },
+    {
+        "repo_name": "we-dd-mern",
+        "title": "WeDD",
+        "slug": "wedd",
+        "type": "Web application",
+        "timeline": {
+            "startDate": "28 October 2022",
+            "endDate": "16 December 2022"
+        },
+        "associated": {
+            "name": "Southern Alberta Institute of Technology"
+        },
+        "stack": [
+            "React.js",
+            "Node.js",
+            "MySQL",
+            "Express"
+        ],
+        "links": {
+            "github": "",
+            "hosted": false
+        },
+        "images": [
+            {
+                "path": "/projects/wedd/home.png",
+                "alt": "Image showing the home page wedd web application."
+            },
+            {
+                "path": "/projects/wedd/login.png",
+                "alt": "Image showing the login page wedd web application."
+            },
+            {
+                "path": "/projects/wedd/signup.png",
+                "alt": "Image showing the signup page wedd web application."
             }
         ]
     }

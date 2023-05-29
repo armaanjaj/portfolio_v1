@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 function Hero() {
     return (
         // This is the parent container
-        <section className="h-[100vh]">
+        <section className="h-full">
             <div className="flex flex-col justify-between items-start mobile:mt-0 tablet:mt-0 laptop:mt-[2rem] desktop:mt-[2rem] mobile:mx-auto tablet:mx-auto laptop:mx-[50px] desktop:mx-[50px]">
                 {/* This is the container inside the parent, which includes text on the left and photo */}
                 <div className="flex flex-row justify-center items-center mobile:block tablet:block laptop:flex desktop:flex">

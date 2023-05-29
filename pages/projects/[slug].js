@@ -10,26 +10,32 @@ import Link from "next/link";
 import allProjects from "../../data/projectData/index.json";
 import Meta from "@/components/Meta";
 import HomeOutlinedIcon from "@mui/icons-material/HomeRounded";
+import useAxios from "@/hooks/useAxios";
+import LoaderFS from "@/components/Loaders/Loader-FS";
 
 function SlugPage() {
     const router = useRouter();
-
     const [projectDetails, setProjectDetails] = useState([]);
+    const [slug, setSlug] = useState("");
+    const [loading, setLoading] = useState(false);
+
+    const projectData = useAxios({
+        method: "get",
+        url: `/api/getProject?slug=${slug}`,
+        headers: JSON.stringify({ accept: "*/*" }),
+    });
 
     useEffect(() => {
         if (!router.isReady) return;
 
-        const { slug } = router.query;
-        getProjectDetails(slug);
-    }, [router.isReady, router.query]);
+        setLoading(true);
+        setSlug(router.query.slug);
 
-    const getProjectDetails = (slug) => {
-        allProjects.map((project) => {
-            if (project.slug === slug) {
-                setProjectDetails(project);
-            }
-        });
-    };
+        if (projectData.response !== null) {
+            setProjectDetails(projectData.response);
+            setLoading(false)
+        }
+    }, [router.isReady, router.query, projectData]);
 
     return (
         <>
@@ -46,7 +52,10 @@ function SlugPage() {
                 }
                 description="Check out all web or mobile application projects on armaancodes.com."
                 seoDescription="Check out all web or mobile application projects on armaancodes.com."
-                seoURL={("https://www.armaancodes.com/projects"+`/${projectDetails.title}`)}
+                seoURL={
+                    "https://www.armaancodes.com/projects" +
+                    `/${projectDetails.title}`
+                }
             />
             <div className="mt-[60px]">
                 <div className={styles.container}>
@@ -412,6 +421,8 @@ function SlugPage() {
                     </div>
                 </div>
             </div>
+            
+            {loading && <LoaderFS />}
         </>
     );
 }

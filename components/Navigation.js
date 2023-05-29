@@ -23,7 +23,7 @@ function Hamburger() {
             height: "100vh",
             transition: {
                 type: "spring",
-                stiffness: 100,
+                stiffness: 200,
                 damping: 40,
                 mass: 0.8,
                 staggerChildren: 0.1,
@@ -51,7 +51,7 @@ function Hamburger() {
     return (
         <>
             <motion.div
-                className="flex flex-col justify-start items-start absolute w-full h-[100vh] top-0 left-0 z-50 overflow-hidden bg-[#08001A]"
+                className="flex flex-col justify-start items-start absolute w-full h-[100vh] top-0 left-0 z-50 overflow-hidden bg-[#08001ae0] backdrop-blur-lg"
                 variants={menuVariants}
                 initial="closed"
                 animate={isMenuOpen ? "open" : "closed"}
@@ -140,9 +140,8 @@ function Hamburger() {
                     type: "spring",
                 }}
                 // className="text-[#350078]"
-                onClick={toggleMenu}
             >
-                <DehazeIcon className="mobile:scale-[200%] tablet:scale-[200%] laptop:scale-[150%] desktop:scale-[150%] rotate-90 mobile:absolute tablet:absolute laptop:static desktop:static mt-[60px] mobile:mx-[20px] tablet:mx-[40px] laptop:mx-[50px] desktop:mx-[50px] hover:cursor-pointer" />
+                <DehazeIcon onClick={toggleMenu} className="mobile:scale-[200%] tablet:scale-[200%] laptop:scale-[150%] desktop:scale-[150%] rotate-90 mobile:absolute tablet:absolute laptop:static desktop:static mt-[60px] mobile:mx-[20px] tablet:mx-[40px] laptop:mx-[50px] desktop:mx-[50px] hover:cursor-pointer" />
             </motion.div>
         </>
     );

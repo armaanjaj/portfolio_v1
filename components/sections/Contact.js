@@ -247,7 +247,7 @@ function Contact() {
                                 }}
                                 transition={{
                                     duration: 1,
-                                    delay: 0.9,
+                                    delay: 0.8,
                                     type: "spring",
                                 }}
                             >

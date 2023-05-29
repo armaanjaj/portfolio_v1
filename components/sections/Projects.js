@@ -49,7 +49,7 @@ function Projects({ projects }) {
                         className="h-[2px] mobile:w-[25%] tablet:w-[30%] laptop:w-[50%] desktop:w-[50%] inline-block bg-[#350078]"
                     ></motion.div>
                 </div>
-                <div className="flex flex-row justify-center items-center flex-wrap gap-5 mobile:mt-[2rem] tablet:mt-[2rem] laptop:mt-[5rem] desktop:mt-[5rem]">
+                <div className="flex flex-row justify-center items-center flex-wrap gap-4 mobile:mt-[2rem] tablet:mt-[2rem] laptop:mt-[5rem] desktop:mt-[5rem]">
                     {projects?.map((project, i) => (
                         <motion.div
                             initial={{
@@ -72,7 +72,7 @@ function Projects({ projects }) {
                         >
                             <ProjectCard
                                 title={project.title}
-                                slug={project.slug}
+                                slug={project.repo_name}
                                 stack={project.stack}
                                 overview={project.overview}
                                 links={project.links}

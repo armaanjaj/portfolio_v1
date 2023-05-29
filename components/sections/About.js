@@ -64,7 +64,7 @@ function About() {
                         }}
                         transition={{
                             duration: 0.5,
-                            delay: 0.5,
+                            delay: 0.6,
                         }}
                     >
                         Greetings! I am Armaan, and I am passionate about
@@ -165,7 +165,7 @@ function About() {
                         }}
                         transition={{
                             duration: 0.5,
-                            delay: 0.8,
+                            delay: 0.7,
                         }}
                     >
                         Thank you for taking the time to get to know me a little
@@ -188,24 +188,25 @@ function About() {
                     }}
                     transition={{
                         duration: 0.5,
-                        delay: 0.9,
+                        delay: 0.8,
                     }}
                 >
-                    <Image
+                    {/* <Image
                         src="/About-me.jpg"
                         alt="Image in the about section"
                         width={400}
                         height={600}
                         priority
                         className="w-[50%] border-[2px] border-solid border-white rounded-[5px] mobile:hidden tablet:hidden laptop:block desktop:block"
-                    />
+                    /> */}
                     <Image
                         src="/About-me-mobile.jpeg"
                         alt="Image in the about section"
                         width={400}
                         height={600}
                         priority
-                        className="w-[100%] border-[2px] mt-5 border-solid border-white rounded-[5px] mobile:block tablet:block laptop:hidden desktop:hidden"
+                        className="w-[100%] border-[2px] mt-5 border-solid border-white rounded-[5px]"
+                        // className="w-[100%] border-[2px] mt-5 border-solid border-white rounded-[5px] mobile:block tablet:block laptop:hidden desktop:hidden"
                     />
                 </motion.div>
             </div>

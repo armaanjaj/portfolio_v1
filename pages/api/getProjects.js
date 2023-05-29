@@ -3,15 +3,20 @@ import path from "path";
 import axios from "axios";
 import NodeCache from "node-cache";
 
+// constants
+const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
+const PRIVATE_ACCES_TOKEN = process.env.PRIVATE_ACCES_TOKEN;
+const ACCOUNT_PERSONAL = "armaanjaj"
+const ACCOUNT_COLLEGE = "armaansinghjaj"
+const API_URL = "https://api.github.com";
+
+// cache configurations
 const cache = new NodeCache({
     stdTTL: 1800,
     checkperiod: 300,
 });
 
-const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
-const PRIVATE_ACCES_TOKEN = process.env.PRIVATE_ACCES_TOKEN;
-const API_URL = "https://api.github.com";
-
+// check if server has fresh cached data, if yes return the fresh/valid data 
 async function getDataFromCacheOrApi(key, apiCall) {
     const cachedData = cache.get(key);
 
@@ -25,14 +30,19 @@ async function getDataFromCacheOrApi(key, apiCall) {
 }
 
 export default async function getProjects(req, res) {
+    // check if the request method if GET, if otherwise return error message
     if (req.method !== "GET") {
         res.status(405).json({ message: "Method Not Allowed" });
         return;
     }
 
+    // try to get the data
     try {
+        // try to get the cached data
         const allProjects = await getDataFromCacheOrApi("projectData", async () => {
-                const response = await axios.get(`${API_URL}/users/armaanjaj/repos`,
+
+                // get the data from the personal GitHub account using authorized API token
+                const response = await axios.get(`${API_URL}/users/${ACCOUNT_PERSONAL}/repos`,
                     {
                         headers: {
                             Authorization: `Bearer ${ACCESS_TOKEN}`,
@@ -40,7 +50,7 @@ export default async function getProjects(req, res) {
                     }
                 );
                 const data = response.data;
-                let projects = await fs.promises.readFile(path.join(process.cwd(), "/data/projectData/names.json"),"utf-8");
+                let projects = await fs.promises.readFile(path.join(process.cwd(), "/data/projectData/index.json"),"utf-8");
                 projects = JSON.parse(projects);
                 const finalData = [];
 
@@ -49,17 +59,17 @@ export default async function getProjects(req, res) {
                 });
 
                 const privateRepoResponse = await axios.get(
-                    `${API_URL}/repos/armaansinghjaj/Wedd-Fullstack-application`,
+                    `${API_URL}/repos/${ACCOUNT_PERSONAL}/we-dd-mern`,
                     {
                         headers: {
-                            Authorization: `Bearer ${PRIVATE_ACCES_TOKEN}`,
+                            Authorization: `Bearer ${ACCESS_TOKEN}`,
                         },
                     }
                 );
                 const privateRepoData = privateRepoResponse.data;
                 finalData.push(privateRepoData);
 
-                finalData.sort((a, b) => new Date(a.pushed_at) - new Date(b.pushed_at));
+                finalData.sort((a, b) => new Date(a.pushed_at) - new Date(b.pushed_at)).reverse();
 
                 const result = [];
 
@@ -77,12 +87,11 @@ export default async function getProjects(req, res) {
                     });
                 }
 
-                return result.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at)).reverse();
+                return result;
             }
         );
         res.status(200).json(allProjects);
     } catch (error) {
-        console.log(error)
         return res.status(500).send({
             success: false,
             message: "Internal Server Error.",
