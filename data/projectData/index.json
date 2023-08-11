@@ -225,16 +225,20 @@
         },
         "images": [
             {
-                "path": "/projects/wedd/home.png",
+                "path": "/projects/wedd/homepage.png",
                 "alt": "Image showing the home page wedd web application."
             },
             {
-                "path": "/projects/wedd/login.png",
-                "alt": "Image showing the login page wedd web application."
+                "path": "/projects/wedd/ridepage.png",
+                "alt": "Image showing the ride page wedd web application."
             },
             {
-                "path": "/projects/wedd/signup.png",
-                "alt": "Image showing the signup page wedd web application."
+                "path": "/projects/wedd/aboutUsPage.png",
+                "alt": "Image showing the about us page wedd web application."
+            },
+            {
+                "path": "/projects/wedd/servicespage.png",
+                "alt": "Image showing the services page wedd web application."
             }
         ]
     }
