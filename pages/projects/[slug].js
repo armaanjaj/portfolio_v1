@@ -7,9 +7,9 @@ import LinkIcon from "@mui/icons-material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Image from "next/image";
 import Link from "next/link";
-import allProjects from "../../data/projectData/index.json";
 import Meta from "@/components/Meta";
 import HomeOutlinedIcon from "@mui/icons-material/HomeRounded";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import useAxios from "@/hooks/useAxios";
 import LoaderFS from "@/components/Loaders/Loader-FS";
 
@@ -33,7 +33,7 @@ function SlugPage() {
 
         if (projectData.response !== null) {
             setProjectDetails(projectData.response);
-            setLoading(false)
+            setLoading(false);
         }
     }, [router.isReady, router.query, projectData]);
 
@@ -152,7 +152,10 @@ function SlugPage() {
                                 delay: 0.2,
                             }}
                         >
-                            {projectDetails?.overview}
+                            {projectDetails?.overview}{" "}
+                            <Link target="_blank" href={projectDetails?.links?.readmore || "#"}>
+                                <OpenInNewIcon /> <span>Read more</span>
+                            </Link>
                         </motion.div>
                         <motion.div
                             initial={{
@@ -421,25 +424,10 @@ function SlugPage() {
                     </div>
                 </div>
             </div>
-            
+
             {loading && <LoaderFS />}
         </>
     );
 }
 
 export default SlugPage;
-
-// function getProjectDetails(slug) {
-//     fetch(`/api/getProject?slug=${slug}`, {
-//         credentials: "same-origin",
-//         mode: "cors",
-//         method: "GET",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//     })
-//         .then((projects) => projects.json())
-//         .then((projects) => {
-//             if (projects) setProjectDetails(projects);
-//         });
-// }

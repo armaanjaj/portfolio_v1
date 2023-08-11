@@ -4,6 +4,10 @@ import ProjectCard from "../ProjectCard";
 import Link from "next/link";
 
 function Projects({ projects }) {
+
+    // for the sake of fratured projects, only show 3 of them
+    const visibleProjects = projects.slice(0, 3);
+
     return (
         <section id="projects">
             <div className="flex flex-col justify-center items-center gap-10">
@@ -27,7 +31,8 @@ function Projects({ projects }) {
                         }}
                         className="inline"
                     >
-                        Projects I&apos;ve worked on
+                        {/* Projects I&apos;ve worked on */}
+                        Featured projects
                     </motion.div>
                     <motion.div
                         initial={{
@@ -50,7 +55,7 @@ function Projects({ projects }) {
                     ></motion.div>
                 </div>
                 <div className="flex flex-row justify-center items-center flex-wrap gap-4 mobile:mt-[2rem] tablet:mt-[2rem] laptop:mt-[5rem] desktop:mt-[5rem]">
-                    {projects?.map((project, i) => (
+                    {visibleProjects?.map((project, i) => (
                         <motion.div
                             initial={{
                                 opacity: 0,

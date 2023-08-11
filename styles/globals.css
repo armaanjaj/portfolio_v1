@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 *{
     padding: 0;
@@ -14,7 +15,8 @@
 body{
     background-color: #08001A;
     color: white;
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
     overflow-y: scroll;
 }

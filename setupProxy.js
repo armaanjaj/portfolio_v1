@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 module.exports = function(app) {
   app.use(
     createProxyMiddleware(["/api"], {
-      target: "https://portfolio.vercel.app/",
+      target: "https://www.armaancodes.com/",
       changeOrigin: true
     })
   );

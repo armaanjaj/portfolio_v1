@@ -58,16 +58,16 @@ export default async function getProjects(req, res) {
                     finalData.push(repo);
                 });
 
-                const privateRepoResponse = await axios.get(
-                    `${API_URL}/repos/${ACCOUNT_PERSONAL}/we-dd-mern`,
-                    {
-                        headers: {
-                            Authorization: `Bearer ${ACCESS_TOKEN}`,
-                        },
-                    }
-                );
-                const privateRepoData = privateRepoResponse.data;
-                finalData.push(privateRepoData);
+                // const privateRepoResponse = await axios.get(
+                //     `${API_URL}/repos/${ACCOUNT_PERSONAL}/we-dd-mern`,
+                //     {
+                //         headers: {
+                //             Authorization: `Bearer ${ACCESS_TOKEN}`,
+                //         },
+                //     }
+                // );
+                // const privateRepoData = privateRepoResponse.data;
+                // finalData.push(privateRepoData);
 
                 finalData.sort((a, b) => new Date(a.pushed_at) - new Date(b.pushed_at)).reverse();
 

@@ -17,7 +17,8 @@
         ],
         "links":{
             "github":"",
-            "hosted":false
+            "hosted":false,
+            "readmore":"https://github.com/armaanjaj/age-in-minutes#readme"
         },
         "images": [
             {
@@ -45,7 +46,8 @@
         ],
         "links":{
             "github":"",
-            "hosted":false
+            "hosted":false,
+            "readmore":"https://github.com/armaanjaj/Connect#readme"
         },
         "images": [
             {
@@ -68,25 +70,55 @@
         "slug": "myinventory",
         "type": "Web application",
         "timeline": {
-            "startDate": "17 September 2022",
-            "endDate": false
+            "startDate": "September 2022",
+            "endDate": "August 2023"
         },
         "associated": {
             "name": "Personal project"
         },
         "stack": [
             "React.js",
+            "TailwindCSS",
             "Node.js",
             "MySQL"
         ],
         "links":{
             "github":"",
-            "hosted":false
+            "hosted":false,
+            "readmore":"https://github.com/armaanjaj/myinventory#readme"
         },
         "images": [
             {
-                "path": "/projects/myinventory/inventory.png",
-                "alt": "Image showing the inventory page of myinventory web application."
+                "path": "/projects/myinventory/homepage.png",
+                "alt": "Image showing the homepage of myinventory web application."
+            },
+            {
+                "path": "/projects/myinventory/signup.png",
+                "alt": "Image showing the signup page of myinventory web application."
+            },
+            {
+                "path": "/projects/myinventory/login.png",
+                "alt": "Image showing the login page of myinventory web application."
+            },
+            {
+                "path": "/projects/myinventory/inventory-darkMode.png",
+                "alt": "Image showing the inventory application in dark mode."
+            },
+            {
+                "path": "/projects/myinventory/inventory-lightMode.png",
+                "alt": "Image showing the inventory application in light mode."
+            },
+            {
+                "path": "/projects/myinventory/items-actions.png",
+                "alt": "Image showing the actions available over the inventory items."
+            },
+            {
+                "path": "/projects/myinventory/add item success.png",
+                "alt": "Image showing the confirmation message after adding items to the database."
+            },
+            {
+                "path": "/projects/myinventory/inventory-report.png",
+                "alt": "Image showing the inventory report for a particular user's account."
             }
         ]
     },
@@ -104,13 +136,13 @@
         },
         "stack": [
             "Next.js",
-            "React.js",
             "Node.js",
-            "Tailwind"
+            "TailwindCSS"
         ],
         "links":{
             "github":"",
-            "hosted":false
+            "hosted":false,
+            "readmore":"https://github.com/armaanjaj/portfolio_v2#readme"
         },
         "images": [
             {
@@ -145,7 +177,8 @@
         ],
         "links":{
             "github":"",
-            "hosted":false
+            "hosted":false,
+            "readmore":"https://github.com/armaanjaj/Quizee#readme"
         },
         "images": [
             {
@@ -180,13 +213,15 @@
         },
         "stack": [
             "React.js",
+            "TailwindCSS",
             "Node.js",
             "MySQL",
             "Express"
         ],
         "links": {
             "github": "",
-            "hosted": false
+            "hosted": false,
+            "readmore":"https://github.com/armaanjaj/we-dd-mern#readme"
         },
         "images": [
             {
