@@ -136,7 +136,6 @@
         },
         "stack": [
             "Next.js",
-            "Node.js",
             "TailwindCSS"
         ],
         "links":{
@@ -212,11 +211,8 @@
             "name": "Southern Alberta Institute of Technology"
         },
         "stack": [
-            "React.js",
-            "TailwindCSS",
-            "Node.js",
-            "MySQL",
-            "Express"
+            "Next.js",
+            "TailwindCSS"
         ],
         "links": {
             "github": "",
