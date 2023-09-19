@@ -153,7 +153,7 @@ function SlugPage() {
                             }}
                         >
                             {projectDetails?.overview}{" "}
-                            <Link target="_blank" href={projectDetails?.links?.readmore || "#"}>
+                            <Link target="_blank" className="underline" href={projectDetails?.links?.readmore || "#"}>
                                 <OpenInNewIcon /> <span>Read more</span>
                             </Link>
                         </motion.div>
@@ -321,7 +321,7 @@ function SlugPage() {
                                 <div className="text-[1rem] font-semibold">
                                     Links
                                 </div>
-                                <div className="flex flex-row justify-evenly items-center flex-wrap gap-2">
+                                <div className="flex flex-row justify-evenly items-center flex-wrap gap-5">
                                     {projectDetails.links?.github && (
                                         <Link
                                             target="_blank"
