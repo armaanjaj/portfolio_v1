@@ -60,7 +60,7 @@ export default function Home() {
     // ----------------------------------------------------------- END
 
     return (
-        <main>
+        <main className="bg-[#08001A]">
             <Meta />
             <Navigation />
             <Hero />

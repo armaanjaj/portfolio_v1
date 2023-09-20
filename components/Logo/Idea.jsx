@@ -1,0 +1,9 @@
+import React from "react";
+
+export default function Idea() {
+    return (
+        <div className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            !dea
+        </div>
+    );
+}

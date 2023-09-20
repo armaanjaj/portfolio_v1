@@ -17,6 +17,7 @@ import {
     GithubOriginal,
     GitOriginal,
     FigmaOriginal,
+    TypescriptOriginal
 } from "devicons-react";
 
 function SkillCardBlock({ icon, name }) {
@@ -73,6 +74,9 @@ function SkillCardBlock({ icon, name }) {
             break;
         case "FigmaOriginal":
             IconComponent = FigmaOriginal;
+            break;
+        case "TypescriptOriginal":
+            IconComponent = TypescriptOriginal;
             break;
         default:
             break;

@@ -47,6 +47,14 @@
                 "icon": "JavaOriginal"
             },
             {
+                "name": "JavaScript",
+                "icon": "JavascriptOriginal"
+            },
+            {
+                "name": "TypeScript",
+                "icon": "TypescriptOriginal"
+            },
+            {
                 "name": "Kotlin",
                 "icon": "KotlinOriginal"
             },
@@ -107,10 +115,6 @@
             {
                 "name": "Tailwind",
                 "icon": "TailwindcssPlain"
-            },
-            {
-                "name": "JavaScript",
-                "icon": "JavascriptOriginal"
             },
             {
                 "name": "MUI",
