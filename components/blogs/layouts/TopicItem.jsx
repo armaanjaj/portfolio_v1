@@ -2,7 +2,7 @@ import React from "react";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import Link from "next/link";
 
-export default function TopicItem({ selected, topic, onSelect, onDeselect }) {
+export default function TopicItem({ selected, topic, onDeselect }) {
     return (
         <div
             className={`flex flex-row justify-between items-center pr-5 text-sm rounded-full w-fit ${

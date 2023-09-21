@@ -57,7 +57,7 @@ function SlugPage() {
                     `/${projectDetails.title}`
                 }
             />
-            <div className="mt-[60px]">
+            <div className="bg-[#08001A] min-h-screen">
                 <div className={styles.container}>
                     <div className="flex flex-col justify-center items-start gap-10">
                         <div className="flex flex-row justify-between items-center w-full">

@@ -47,7 +47,7 @@ function Home() {
                 seoTitle={"Projects | armaancodes.com"}
                 seoURL={"https://www.armaancodes.com/projects"}
             />
-            <div className="mt-[60px]">
+            <div className="bg-[#08001A] min-h-screen">
                 <div className={styles.container}>
                     <div className="flex flex-row justify-between items-center gap-10">
                         <div className="text-[3rem] font-semibold">
