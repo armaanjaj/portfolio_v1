@@ -14,13 +14,9 @@
             "icon":"TailwindcssPlain"
         },
         {
-            "name":"JavaScript",
-            "icon":"JavascriptOriginal"
-        },
-        {
             "name":"MUI",
             "icon":"MaterialuiOriginal"
         }
     ],
-    "index":1
+    "index":2
 }

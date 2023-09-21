@@ -15,6 +15,7 @@ module.exports = {
             tablet: "640px",
             laptop: "1024px",
             desktop: "1280px",
+            largeDesktop: "1920px",
         },
         extend: {
             animation: {

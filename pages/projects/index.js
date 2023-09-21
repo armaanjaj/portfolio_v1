@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "@/styles/index.module.css";
 import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
-import allProjects from "@/data/projectData/index.json";
+// import allProjects from "@/data/projectData/index.json";
 import HomeOutlinedIcon from "@mui/icons-material/HomeRounded";
 import Link from "next/link";
 import Meta from "@/components/Meta";

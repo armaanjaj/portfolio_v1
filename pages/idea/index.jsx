@@ -1,19 +1,35 @@
 import React from "react";
 import Navigation from "@/components/blogs/Navigation";
 // import Image from "next/image";
-import BlogItem from "@/components/blogs/blogItem/BlogItem";
-import TopicItem from "@/components/blogs/blogItem/TopicItem";
+import BlogItem from "@/components/blogs/layouts/BlogItem";
+import TopicItem from "@/components/blogs/layouts/TopicItem";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
+import Loader from "@/components/Loaders/Loader";
+import useAxios from "@/hooks/useAxios";
 
 export default function Page() {
     const router = useRouter();
 
     const mode = useSelector((state) => state.darkMode);
     const [selectedTopic, setSelectedTopic] = React.useState(null);
+    const [blogList, setBlogList] = React.useState([]);
+    const [loading, setLoading] = React.useState(false);
+
+    const blogs = useAxios({
+        method: "get",
+        url: "/api/getBlogs",
+        headers: JSON.stringify({ accept: "*/*" }),
+    });
 
     React.useEffect(() => {
         document.title = "!dea - Read all my latest blogs";
+
+        setLoading(true);
+        if (blogs.response !== null) {
+            setBlogList(blogs.response);
+            setLoading(false);
+        }
 
         if (!router.isReady) return;
 
@@ -21,7 +37,7 @@ export default function Page() {
             const topicName = router.query.topic;
             setSelectedTopic(topicName);
         }
-    }, [router.isReady, router.query]);
+    }, [router.isReady, router.query, blogs]);
 
     const handleSelectTopic = (topic) => {
         setSelectedTopic(topic);
@@ -55,49 +71,31 @@ export default function Page() {
                 </div> */}
 
                 {/* Page section 1 */}
-                <div className="flex flex-row justify-evenly items-start w-full p-5">
-                    <div className="w-2/3 border-r-[0.05rem] border-gray-300">
+                <div className="flex flex-row justify-evenly items-start w-full p-5 smallMobile:flex-wrap-reverse mobile:flex-wrap-reverse tablet:flex-wrap-reverse laptop:flex-nowrap desktop:flex-nowrap largeDesktop:flex-nowrap">
+                    <div className="smallMobile:w-full mobile:w-full tablet:w-full laptop:w-2/3 desktop:w-2/3 largeDesktop:w-2/3 smallMobile:border-0 mobile:border-0 tablet:border-0 laptop:border-r-[0.05rem] desktop:border-r-[0.05rem] largeDesktop:border-r-[0.05rem] border-gray-300">
                         <div>
                             {/* <div className="font-semibold text-2xl">
-                                Latest blogs
-                            </div> */}
-                            <BlogItem
-                                author={"Armaan"}
-                                blogHead={
-                                    "We're starting to understand more of what causes long COVID brain fog"
-                                }
-                                blogBody={
-                                    "Not only did a new study identify two blood proteins linked to cognitive difficulties a year after COVID-19 infection, but the..."
-                                }
-                                date={"Sept 18"}
-                                image={"/Hero.jpeg"}
-                            />
-                            <BlogItem
-                                author={"Armaan"}
-                                blogHead={
-                                    "i was nine years-old when i had my first crush"
-                                }
-                                blogBody={
-                                    "Her name was Candice, and she went by Candi. She was my first — and biggest — childhood crush.…"
-                                }
-                                date={"Sept 13"}
-                                image={"/Hero.jpeg"}
-                            />
-                            <BlogItem
-                                author={"Armaan"}
-                                blogHead={
-                                    "Mastering the Art of Rain Photography"
-                                }
-                                blogBody={
-                                    "Making the best of a rainy day out in nature"
-                                }
-                                date={"Sept 16"}
-                                image={"/Hero.jpeg"}
-                            />
+                                        Latest blogs
+                                </div> */}
+                            {!loading ? (
+                                blogList?.map((blog, i) => (
+                                    <BlogItem
+                                        author={blog.author}
+                                        blogHead={blog.head}
+                                        blogBody={blog.opening.slice(0, 100)+"..."}
+                                        date={blog.date}
+                                        image={blog.images[0].headImage.src}
+                                        text={mode.text}
+                                        key={i}
+                                    />
+                                ))
+                            ) : (
+                                <Loader />
+                            )}
                         </div>
                     </div>
 
-                    <div className="w-1/3 pt-3 sticky top-[4.5rem]">
+                    <div className="smallMobile:w-full mobile:w-full tablet:w-full laptop:w-1/3 desktop:w-1/3 largeDesktop:w-1/3 pt-3 smallMobile:relative mobile:relative tablet:relative laptop:sticky desktop:sticky largeDesktop:sticky smallMobile:top-0 mobile:top-0 tablet:top-0 laptop:top-[4.5rem] desktop:top-[4.5rem] largeDesktop:top-[4.5rem]">
                         <div className="px-5 flex flex-col justify-start items-start gap-2">
                             <div className="font-semibold text-2xl">Topics</div>
 

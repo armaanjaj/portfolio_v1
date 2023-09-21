@@ -2,6 +2,7 @@
     padding: 60px 50px;
     padding-bottom: 90px;
     display: block;
+    height: fit-content;
 }
 
 /* mobile */

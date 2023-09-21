@@ -51,97 +51,101 @@ function Hamburger() {
     return (
         <>
             <motion.div
-                className="flex flex-col justify-start items-start absolute w-full h-[100vh] top-0 left-0 z-50 overflow-hidden bg-[#08001ae0] backdrop-blur-lg"
+                className={`flex flex-col justify-start items-start absolute w-full top-0 left-0 z-50 overflow-hidden bg-[#08001ae0] backdrop-blur-lg ${
+                    isMenuOpen ? "h-screen" : "h-0"
+                }`}
                 variants={menuVariants}
                 initial="closed"
                 animate={isMenuOpen ? "open" : "closed"}
             >
-                <div>
-                    <div className={styles.container}>
-                        <div className="text-[#8f33ff] mt-[60px] hover:cursor-pointer w-fit" onClick={toggleMenu}>
-                            <CloseIcon className="scale-[150%]" />
-                        </div>
+                <div className={styles.container}>
+                    <div className="text-[#8f33ff] smallMobile:mt-[60px] mobile:mt-[60px] tablet:mt-[60px] laptop:mt-0 desktop:mt-0 largeDesktop:mt-0 hover:cursor-pointer w-fit h-fit" onClick={toggleMenu}>
+                        <CloseIcon className="scale-[150%]" />
                     </div>
-                    <div className={styles.container}>
-                        <motion.div className="flex flex-col justify-center items-start">
-                            <motion.div
-                                className="mb-4 text-center"
-                                variants={menuItemVariants}
+                </div>
+                <div className={styles.container}>
+                    <motion.div className={`flex flex-col justify-start items-start w-screen smallMobile:h-full mobile:h-full tablet:h-full laptop:h-[90%] desktop:h-[90%] largeDesktop:h-[100%] gap-3 ${isMenuOpen ? "flex-wrap" : "flex-nowrap"}`}>
+                        <motion.div
+                            className="text-center"
+                            variants={menuItemVariants}
+                        >
+                            <a
+                                className="text-[3rem] font-bold"
+                                href="#aboutme"
                             >
-                                <a
-                                    className="text-[3rem] font-bold no-underline hover:scale-[200%]"
-                                    href="#aboutme"
-                                >
-                                    About me
-                                </a>
-                            </motion.div>
-                            <motion.div
-                                className="mb-4 text-center"
-                                variants={menuItemVariants}
-                            >
-                                <Link
-                                    className="text-[3rem] font-bold no-underline hover:scale-[200%]"
-                                    href="/projects"
-                                >
-                                    Projects
-                                </Link>
-                            </motion.div>
-                            <motion.div
-                                className="mb-4 text-center"
-                                variants={menuItemVariants}
-                            >
-                                <a
-                                    className="text-[3rem] font-bold no-underline hover:scale-[200%]"
-                                    href="#skills"
-                                >
-                                    Skills
-                                </a>
-                            </motion.div>
-                            {/* <motion.div
-                                className="mb-4 text-center"
-                                variants={menuItemVariants}
-                            >
-                                <a
-                                    className="text-[3rem] font-bold no-underline hover:scale-[200%]"
-                                    href="#blogs"
-                                >
-                                    Blogs
-                                </a>
-                            </motion.div> */}
-                            <motion.div
-                                className="mb-4 text-center"
-                                variants={menuItemVariants}
-                            >
-                                <a
-                                    className="text-[3rem] font-bold no-underline hover:scale-[200%]"
-                                    href="#getintouch"
-                                >
-                                    Get in Touch
-                                </a>
-                            </motion.div>
+                                About me
+                            </a>
                         </motion.div>
-                    </div>
+                        <motion.div
+                            className="text-center"
+                            variants={menuItemVariants}
+                        >
+                            <Link
+                                className="text-[3rem] font-bold"
+                                href="/projects"
+                            >
+                                Projects
+                            </Link>
+                        </motion.div>
+                        <motion.div
+                            className="text-center"
+                            variants={menuItemVariants}
+                        >
+                            <a
+                                className="text-[3rem] font-bold"
+                                href="#skills"
+                            >
+                                Skills
+                            </a>
+                        </motion.div>
+                        <motion.div
+                            className="text-center"
+                            variants={menuItemVariants}
+                        >
+                            <a
+                                className="text-[3rem] font-bold"
+                                href="/idea"
+                            >
+                                Blogs
+                            </a>
+                        </motion.div>
+                        <motion.div
+                            className="text-center"
+                            variants={menuItemVariants}
+                        >
+                            <a
+                                className="text-[3rem] font-bold"
+                                href="#getintouch"
+                            >
+                                Get in Touch
+                            </a>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </motion.div>
             <motion.div
                 initial={{
                     opacity: 0.2,
                     y: -40,
-                    color: "#350078"
+                    color: "#350078",
                 }}
                 animate={{
                     opacity: 1,
                     y: 0,
-                    color: "#8f33ff"
+                    color: "#8f33ff",
                 }}
                 transition={{
                     duration: 2,
                     delay: 0,
                     type: "spring",
                 }}
-                // className="text-[#350078]"
             >
-                <DehazeIcon onClick={toggleMenu} className="mobile:scale-[200%] tablet:scale-[200%] laptop:scale-[150%] desktop:scale-[150%] rotate-90 mobile:absolute tablet:absolute laptop:static desktop:static mt-[60px] mobile:mx-[20px] tablet:mx-[40px] laptop:mx-[50px] desktop:mx-[50px] hover:cursor-pointer" />
+                <DehazeIcon
+                    onClick={toggleMenu}
+                    className={`mobile:scale-[200%] tablet:scale-[200%] laptop:scale-[150%] desktop:scale-[150%] rotate-90 mobile:absolute tablet:absolute laptop:static desktop:static mt-[60px] mobile:mx-[20px] tablet:mx-[40px] laptop:mx-[50px] desktop:mx-[50px] hover:cursor-pointer ${
+                        isMenuOpen ? "hidden" : ""
+                    }`}
+                />
             </motion.div>
         </>
     );

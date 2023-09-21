@@ -10,6 +10,14 @@
             "icon":"KotlinOriginal"
         },
         {
+            "name":"JavaScript",
+            "icon":"JavascriptOriginal"
+        },
+        {
+            "name":"TypeScript",
+            "icon":"TypescriptOriginal"
+        },
+        {
             "name":"Python",
             "icon":"PythonOriginal"
         },
@@ -22,5 +30,5 @@
             "icon":"COriginal"
         }
     ],
-    "index":4
+    "index":1
 }
