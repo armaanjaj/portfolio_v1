@@ -12,8 +12,10 @@ export default function Page() {
     const router = useRouter();
 
     const mode = useSelector((state) => state.darkMode);
+
     const [selectedTopic, setSelectedTopic] = React.useState(null);
     const [blogList, setBlogList] = React.useState([]);
+    const [topicList, setTopicList] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
 
     const blogs = useAxios({
@@ -21,33 +23,44 @@ export default function Page() {
         url: "/api/getBlogs",
         headers: JSON.stringify({ accept: "*/*" }),
     });
+    const topics = useAxios({
+        method: "get",
+        url: "/api/getTopics",
+        headers: JSON.stringify({ accept: "*/*" }),
+    });
+
+    let filteredBlogs = []
+    if (router.isReady) {
+        filteredBlogs = useAxios({
+            method: "get",
+            url: `/api/getFilteredBlogs?topic=${router.query.topic}`,
+            headers: JSON.stringify({ accept: "*/*" }),
+        });
+    }
 
     React.useEffect(() => {
         document.title = "!dea - Read all my latest blogs";
 
+        setSelectedTopic(null);
+
         setLoading(true);
         if (blogs.response !== null) {
             setBlogList(blogs.response);
-            setLoading(false);
         }
+        if (topics.response !== null) {
+            setTopicList(topics.response);
+        }
+        setLoading(false);
 
         if (!router.isReady) return;
 
         if (router.query.topic) {
             const topicName = router.query.topic;
             setSelectedTopic(topicName);
+
+            setBlogList(filteredBlogs.response);
         }
-    }, [router.isReady, router.query, blogs]);
-
-    const handleSelectTopic = (topic) => {
-        setSelectedTopic(topic);
-        router.push(`/idea?topic=${topic}`);
-    };
-
-    const handleDeselectTopic = () => {
-        setSelectedTopic(null);
-        router.push(`/idea`);
-    };
+    }, [router.isReady, router.query, blogs, topics]);
 
     return (
         <div
@@ -81,8 +94,12 @@ export default function Page() {
                                 blogList?.map((blog, i) => (
                                     <BlogItem
                                         author={blog.author}
+                                        topic={blog.topic}
+                                        link={blog.link}
                                         blogHead={blog.head}
-                                        blogBody={blog.opening.slice(0, 100)+"..."}
+                                        blogBody={
+                                            blog.opening.slice(0, 100) + "..."
+                                        }
                                         date={blog.date}
                                         image={blog.images[0].headImage.src}
                                         text={mode.text}
@@ -100,74 +117,16 @@ export default function Page() {
                             <div className="font-semibold text-2xl">Topics</div>
 
                             <div className="py-2 flex flex-row justify-start items-center flex-wrap gap-3">
-                                <TopicItem
-                                    selected={selectedTopic === "Programming"}
-                                    topic={"Programming"}
-                                    onSelect={() =>
-                                        handleSelectTopic("Programming")
-                                    }
-                                    onDeselect={handleDeselectTopic}
-                                />
-                                <TopicItem
-                                    selected={selectedTopic === "Data Science"}
-                                    topic={"Data Science"}
-                                    onSelect={() =>
-                                        handleSelectTopic("Data Science")
-                                    }
-                                    onDeselect={handleDeselectTopic}
-                                />
-                                <TopicItem
-                                    selected={selectedTopic === "Technology"}
-                                    topic={"Technology"}
-                                    onSelect={() =>
-                                        handleSelectTopic("Technology")
-                                    }
-                                    onDeselect={handleDeselectTopic}
-                                />
-                                <TopicItem
-                                    selected={
-                                        selectedTopic === "Self Improvement"
-                                    }
-                                    topic={"Self Improvement"}
-                                    onSelect={() =>
-                                        handleSelectTopic("Self Improvement")
-                                    }
-                                    onDeselect={handleDeselectTopic}
-                                />
-                                <TopicItem
-                                    selected={selectedTopic === "Writing"}
-                                    topic={"Writing"}
-                                    onSelect={() =>
-                                        handleSelectTopic("Writing")
-                                    }
-                                    onDeselect={handleDeselectTopic}
-                                />
-                                <TopicItem
-                                    selected={selectedTopic === "Politics"}
-                                    topic={"Politics"}
-                                    onSelect={() =>
-                                        handleSelectTopic("Politics")
-                                    }
-                                    onDeselect={handleDeselectTopic}
-                                />
-                                <TopicItem
-                                    selected={selectedTopic === "Leet Code"}
-                                    topic={"Leet Code"}
-                                    onSelect={() =>
-                                        handleSelectTopic("Leet Code")
-                                    }
-                                    onDeselect={handleDeselectTopic}
-                                />
-                                <TopicItem
-                                    selected={
-                                        selectedTopic === "Machine Learning"
-                                    }
-                                    topic={"Machine Learning"}
-                                    onSelect={() =>
-                                        handleSelectTopic("Machine Learning")
-                                    }
-                                    onDeselect={handleDeselectTopic}
-                                />
+                                {topicList.map((topic) => (
+                                    <TopicItem
+                                        selected={selectedTopic === topic}
+                                        topic={topic}
+                                        onDeselect={() => {
+                                            router.push(`/idea`);
+                                        }}
+                                        key={topic}
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>

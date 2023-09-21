@@ -4,6 +4,7 @@
         "author": "Armaan",
         "topic": "Programming",
         "language": "Kotlin",
+        "link": "-kotlin-beginner-guide",
         "head": "Getting Started with Kotlin: A Beginner's Guide",
         "images": [
             {
@@ -56,8 +57,9 @@
     {
         "date": "September 20",
         "author": "Armaan",
-        "topic": "Programming",
+        "topic": "Writing",
         "language": "Kotlin",
+        "link": "-writing-guide",
         "head": "Getting Started with Kotlin: A Beginner's Guide",
         "images": [
             {
@@ -110,8 +112,9 @@
     {
         "date": "September 20",
         "author": "Armaan",
-        "topic": "Programming",
+        "topic": "Politics",
         "language": "Kotlin",
+        "link": "-politics-beginner-guide",
         "head": "Getting Started with Kotlin: A Beginner's Guide",
         "images": [
             {
@@ -164,8 +167,9 @@
     {
         "date": "September 20",
         "author": "Armaan",
-        "topic": "Programming",
+        "topic": "Leet Code",
         "language": "Kotlin",
+        "link": "-Leet Code-How-to-reverse-a-string",
         "head": "Getting Started with Kotlin: A Beginner's Guide",
         "images": [
             {
