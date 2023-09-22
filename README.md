@@ -11,15 +11,25 @@ I used vercel to deploy it. (https://www.armaancodes.com/)
 * IDE : Visual Studio Code
 
 ## NPM packages installed
+* @emotion/memoize
 * @emotion/react
 * @emotion/styled
 * @mui/icons-material
 * @mui/material
+* axios
+* node-cache
+* react-code-blocks
 * framer-motion
 * devicons-react
+* redux
+* react-redux
+* redux-persist
+* redux-thunk
+* styled-components
 
 ## Screenshots
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/113659942/231727880-4a93c014-a9a6-4071-9920-c7b66ba4ab9a.png">
+<img width="960" alt="image" src="https://github.com/armaanjaj/portfolio_v2/assets/113659942/d9453b3c-5259-453d-9320-6ccbbeca3a04">
 
 
 ## Clone

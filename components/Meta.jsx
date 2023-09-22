@@ -9,6 +9,7 @@ function Meta({
     seoURL = "https://www.armaancodes.com/",
     seoImage = "https://user-images.githubusercontent.com/113659942/231727880-4a93c014-a9a6-4071-9920-c7b66ba4ab9a.png",
     twitterCreator = "armaanjaj",
+    theme = "#08001A"
 }) {
     return (
         <Head>
@@ -16,7 +17,7 @@ function Meta({
                 name="viewport"
                 content="width=device-width, initial-scale=1"
             />
-            <meta name="theme-color" content="#08001A" />
+            <meta name="theme-color" content={theme} />
             <meta name="keywords" content={keywords} />
             <meta name="description" content={description} />
 
