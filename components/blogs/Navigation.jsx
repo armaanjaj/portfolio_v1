@@ -33,9 +33,9 @@ export default function Navigation() {
                 </Link>
             </div>
             <div className="w-1/3"></div>
-            <div className="flex flex-row justify-end items-center w-1/3 gap-5">
+            <div className="flex flex-row justify-end items-center w-2/3 gap-5">
                 <div>
-                    <Link href={"/"}>About me</Link>
+                    <Link href={"/"} className="flex flex-row justify-end items-center flex-nowrap w-full">About me</Link>
                 </div>
                 {/* <div>
                     Write
