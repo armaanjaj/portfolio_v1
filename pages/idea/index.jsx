@@ -52,18 +52,18 @@ export default function Page() {
         if (topics.response !== null) {
             setTopicList(topics.response);
         }
-        setLoading(false);
-
+        
         if (!router.isReady) return;
-
+        
         setQueryTopic(router.query.topic);
-
+        
         if (router.query.topic) {
             const topicName = router.query.topic;
             setSelectedTopic(topicName);
 
             setBlogList(filteredBlogs.response);
         }
+        setLoading(false);
     }, [router.isReady, router.query, blogs, topics]);
 
     return (
