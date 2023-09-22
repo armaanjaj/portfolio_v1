@@ -3,6 +3,8 @@ import Navigation from "@/components/blogs/Navigation";
 // import Image from "next/image";
 import BlogItem from "@/components/blogs/layouts/BlogItem";
 import TopicItem from "@/components/blogs/layouts/TopicItem";
+import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
+import ArrowDropUpRoundedIcon from "@mui/icons-material/ArrowDropUpRounded";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import Loader from "@/components/Loaders/Loader";
@@ -17,6 +19,7 @@ export default function Page() {
     const [blogList, setBlogList] = React.useState([]);
     const [topicList, setTopicList] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
+    const [topicsDropdown, setTopicsDropdown] = React.useState(false);
 
     const blogs = useAxios({
         method: "get",
@@ -29,7 +32,7 @@ export default function Page() {
         headers: JSON.stringify({ accept: "*/*" }),
     });
 
-    let filteredBlogs = []
+    let filteredBlogs = [];
     if (router.isReady) {
         filteredBlogs = useAxios({
             method: "get",
@@ -101,7 +104,11 @@ export default function Page() {
                                             blog.opening.slice(0, 100) + "..."
                                         }
                                         date={blog.date}
-                                        image={blog.images[0].headImage.src}
+                                        image={
+                                            "/blogs/" +
+                                            blog.link.slice(1) +
+                                            blog.images[0].headImage.src
+                                        }
                                         text={mode.text}
                                         key={i}
                                     />
@@ -114,9 +121,30 @@ export default function Page() {
 
                     <div className="smallMobile:w-full mobile:w-full tablet:w-full laptop:w-1/3 desktop:w-1/3 largeDesktop:w-1/3 pt-3 smallMobile:relative mobile:relative tablet:relative laptop:sticky desktop:sticky largeDesktop:sticky smallMobile:top-0 mobile:top-0 tablet:top-0 laptop:top-[4.5rem] desktop:top-[4.5rem] largeDesktop:top-[4.5rem]">
                         <div className="px-5 flex flex-col justify-start items-start gap-2">
-                            <div className="font-semibold text-2xl">Topics</div>
+                            <div className="font-semibold text-2xl flex flex-row justify-between items-center flex-nowrap">
+                                <span>Topics</span>
+                                <span onClick={()=>setTopicsDropdown(!topicsDropdown)} className="smallMobile:block mobile:block tablet:hidden laptop:hidden desktop:hidden largeDesktop:hidden">
+                                    {!topicsDropdown ? (
+                                        <ArrowDropDownOutlinedIcon />
+                                    ) : (
+                                        <ArrowDropUpRoundedIcon />
+                                    )}
+                                </span>
+                            </div>
 
-                            <div className="py-2 flex flex-row justify-start items-center flex-wrap gap-3">
+                            <div className={`py-2 flex-row justify-start items-center flex-wrap gap-3 ${!topicsDropdown ? 'hidden' : 'flex'} tablet:hidden laptop:hidden desktop:hidden largeDesktop:hidden`}>
+                                {topicList.map((topic) => (
+                                    <TopicItem
+                                        selected={selectedTopic === topic}
+                                        topic={topic}
+                                        onDeselect={() => {
+                                            router.push(`/idea`);
+                                        }}
+                                        key={topic}
+                                    />
+                                ))}
+                            </div>
+                            <div className="py-2 flex-row justify-start items-center flex-wrap gap-3 smallMobile:hidden mobile:hidden tablet:flex laptop:flex desktop:flex largeDesktop:flex">
                                 {topicList.map((topic) => (
                                     <TopicItem
                                         selected={selectedTopic === topic}

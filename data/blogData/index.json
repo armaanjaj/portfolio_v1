@@ -1,16 +1,16 @@
 [
     {
-        "date": "September 20",
+        "date": "Sept 20",
         "author": "Armaan",
         "topic": "Programming",
         "language": "Kotlin",
-        "link": "-kotlin-beginner-guide",
+        "link": "-Getting-Started-with-Kotlin",
         "head": "Getting Started with Kotlin: A Beginner's Guide",
         "images": [
             {
                 "headImage": {
-                    "src": "/Hero.jpeg",
-                    "alt": "xyz"
+                    "src": "/HeadImage.png",
+                    "alt": "Kotlin language image with logo"
                 }
             }
         ],
@@ -18,35 +18,122 @@
         "sections": [
             {
                 "section": "Installing Kotlin",
-                "content": "Before we dive into coding, you'll need to set up your development environment. You have a few options..."
+                "content": "Before we dive into coding, you'll need to set up your development environment. You have a few options:",
+                "list": [
+                    {
+                        "head": "Kotlin Playground:",
+                        "content": "For quick experimentation, you can use the Kotlin Playground online. It requires no installation, and you can start writing Kotlin code immediately."
+                    },
+                    {
+                        "head": "Command Line:",
+                        "content": "If you prefer to work on your local machine, you can install the Kotlin command-line compiler. Follow the installation instructions for your platform."
+                    },
+                    {
+                        "head": "IDE:",
+                        "content": "Kotlin has excellent support in popular Integrated Development Environments (IDEs) like IntelliJ IDEA and Android Studio. Download and install one of these IDEs to enjoy a feature-rich development experience."
+                    }
+                ]
             },
             {
                 "section": "Your First Kotlin Program",
-                "content": "Let's write a simple \"Hello, World!\" program in Kotlin. Open your preferred development environment and create a new Kotlin file (usually with a .kt extension)..."
+                "content": "Let's write a simple \"Hello, World!\" program in Kotlin...",
+                "code": [
+                    "fun main() {",
+                    "    println(\"Hello, World!\")",
+                    "}"
+                ],
+                "explanation": [
+                    {
+                        "head": "In this code:",
+                        "ol": [
+                            "fun main() { ... } defines the entry point of the program...",
+                            "println() is used to print the text \"Hello, World!\" to the console."
+                        ]
+                    }
+                ]
             },
             {
                 "section": "Variables and Data Types",
-                "content": "Kotlin supports various data types, including: Integers: Int, Long, Short, and Byte. You can declare variables using the val (immutable) and var (mutable) keywords..."
+                "content": "Kotlin supports various data types, including: Integers:",
+                "ol": [
+                    "Integers: Int, Long, Short, and Byte.",
+                    "Floating-Point Numbers: Double and Float.",
+                    "Characters: Char.",
+                    "Booleans: Boolean."
+                ],
+                "code":[
+                    "val pi = 3.14159 // Immutable",
+                    "var counter = 0   // Mutable",
+                    " ",
+                    "// Type annotations (optional)",
+                    "val name: String = \"Alice\""
+                ]
             },
             {
                 "section": "Conditional Statements",
-                "content": "Kotlin provides if, else if, and else for conditional logic. val age = 20 if (age < 18) {...} else if (age >= 18 && age < 65) {...} else {...}"
+                "content": "Kotlin provides if, else if, and else for conditional logic:",
+                "code":[
+                    "val age = 20",
+                    " ",
+                    "if (age < 18) {",
+                    "    println(\"You're a minor.\")",
+                    "} else if (age >= 18 && age < 65) {",
+                    "    println(\"You're an adult.\")",
+                    "} else {",
+                    "    println(\"You're a senior.\")",
+                    "}"
+                ]
             },
             {
                 "section": "Loops",
-                "content": "You can use while and for loops in Kotlin. var i = 0 while (i < 5) {...} for (num in 1..5) {...}"
+                "content": "You can use while and for loops in Kotlin:",
+                "code":[
+                    "// While loop",
+                    "var i = 0",
+                    "while (i < 5) {",
+                    "    println(i)",
+                    "    i++",
+                    "}",
+                    " ",
+                    "// For loop",
+                    "for (num in 1..5) {",
+                    "    println(num)",
+                    "}"
+                ]
             },
             {
                 "section": "Functions",
-                "content": "Functions are declared using the fun keyword. fun add(a: Int, b: Int): Int {...} val result = add(3, 5) println(\"3 + 5 = $result\")"
+                "content": "Functions are declared using the fun keyword:",
+                "code":[
+                    "fun add(a: Int, b: Int): Int {",
+                    "    return a + b",
+                    "}",
+                    " ",
+                    "val result = add(3, 5)",
+                    "println(\"3 + 5 = $result\")"
+                ]
             },
             {
                 "section": "Null Safety",
-                "content": "Kotlin's type system helps prevent null pointer exceptions. You can explicitly declare whether a variable can hold null with the ? modifier..."
+                "content": "Kotlin's type system helps prevent null pointer exceptions. You can explicitly declare whether a variable can hold null with the ? modifier:",
+                "code":[
+                    "val name: String? = null // Nullable",
+                    "val length = name?.length // Safe call operator"
+                ]
             },
             {
                 "section": "Classes and Objects",
-                "content": "Kotlin supports object-oriented programming. Here's a simple class definition. class Person(val name: String, var age: Int) {...} val person = Person(\"Alice\", 30) person.speak()"
+                "content": "Kotlin supports object-oriented programming. Here's a simple class definition:",
+                "code":[
+                    "class Person(val name: String, var age: Int) {",
+                    "    fun speak() {",
+                    "        println(\"Hello, my name is $name.\")",
+                    "    }",
+                    "}",
+                    " ",
+                    "val person = Person(\"Alice\", 30)",
+                    "person.speak()"
+                ]
             },
             {
                 "section": "Conclusion",
@@ -55,167 +142,287 @@
         ]
     },
     {
-        "date": "September 20",
+        "date": "Sept 22",
         "author": "Armaan",
-        "topic": "Writing",
+        "topic": "Programming",
         "language": "Kotlin",
-        "link": "-writing-guide",
-        "head": "Getting Started with Kotlin: A Beginner's Guide",
+        "link": "-Intermediate-Kotlin-Programming",
+        "head": "Intermediate Kotlin Programming: Exploring Advanced Concepts",
         "images": [
             {
                 "headImage": {
-                    "src": "/Hero.jpeg",
-                    "alt": "xyz"
+                    "src": "/HeadImage.png",
+                    "alt": "Kotlin language image with logo"
                 }
             }
         ],
-        "opening": "Writing is a modern, statically-typed programming language developed by JetBrains. It has gained popularity for its conciseness, safety features, and seamless interoperability with Java. If you're new to programming or looking to learn a new language, Kotlin is an excellent choice. In this guide, we'll cover the fundamentals of Kotlin to help you get started.",
+        "opening": "Kotlin is not just a beginner-friendly language; it also offers powerful features for intermediate developers to enhance their programming skills. In this guide, we'll delve into some advanced concepts and techniques that will take your Kotlin programming to the next level.",
         "sections": [
             {
-                "section": "Installing Kotlin",
-                "content": "Before we dive into coding, you'll need to set up your development environment. You have a few options..."
+                "section": "Lambda Expressions",
+                "content": "Lambda expressions are a concise way to represent anonymous functions. They are a powerful feature of Kotlin, often used for functional programming tasks. Here's a quick example:",
+                "code": [
+                    "val sum = { a: Int, b: Int -> a + b }",
+                    "val result = sum(5, 3) // result = 8"
+                ],
+                "explanation": [
+                    {
+                        "head": "Lambda expressions allow you to pass functions as arguments, making your code more flexible and expressive."
+                    }
+                ]
+
             },
             {
-                "section": "Your First Kotlin Program",
-                "content": "Let's write a simple \"Hello, World!\" program in Kotlin. Open your preferred development environment and create a new Kotlin file (usually with a .kt extension)..."
+                "section": "Higher-Order Functions",
+                "content": "Kotlin supports higher-order functions, which are functions that take other functions as parameters or return them. They are a fundamental concept in functional programming. Consider the following example using filter and map:",
+                "code": [
+                    "val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9)",
+                    "val evenSquares = numbers.filter { it % 2 == 0 }.map { it * it }",
+                    "// evenSquares: [4, 16, 36, 64]"
+                ],
+                "explanation": [
+                    {
+                        "head": "Higher-order functions enable you to write more concise and readable code."
+                    }
+                ]
             },
             {
-                "section": "Variables and Data Types",
-                "content": "Kotlin supports various data types, including: Integers: Int, Long, Short, and Byte. You can declare variables using the val (immutable) and var (mutable) keywords..."
+                "section": "Coroutines",
+                "content": "Coroutines are a Kotlin feature for handling asynchronous programming. They make asynchronous code more readable and maintainable compared to traditional callback-based approaches. Here's a simple coroutine example:",
+                "code":[
+                    "import kotlinx.coroutines.*",
+                    " ",
+                    "fun main() {",
+                    "        delay(1000)",
+                    "        println(\"Hello from coroutine!\")",
+                    "    }",
+                    "    Thread.sleep(2000)",
+                    "}"
+                ],
+                "explanation": [
+                    {
+                        "head": "Coroutines simplify concurrent programming tasks and help avoid callback hell."
+                    }
+                ]
             },
             {
-                "section": "Conditional Statements",
-                "content": "Kotlin provides if, else if, and else for conditional logic. val age = 20 if (age < 18) {...} else if (age >= 18 && age < 65) {...} else {...}"
+                "section": "Extension Functions",
+                "content": "Kotlin allows you to add new functions to existing classes without modifying their source code. These are called extension functions. They are particularly useful for enhancing library classes or adding utility methods to your own data types.",
+                "code":[
+                    "fun String.isEmail(): Boolean {",
+                    "    val pattern = Regex(\"[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}\")",
+                    "    return pattern.matches(this)",
+                    "}",
+                    " ",
+                    "val email = \"user@example.com\"",
+                    "val isValid = email.isEmail() // true"
+                ],
+                "explanation": [
+                    {
+                        "head": "Extension functions promote code reusability and organization."
+                    }
+                ]
             },
             {
-                "section": "Loops",
-                "content": "You can use while and for loops in Kotlin. var i = 0 while (i < 5) {...} for (num in 1..5) {...}"
+                "section": "Sealed Classes",
+                "content": "Sealed classes are a way to represent restricted class hierarchies. They are often used for modeling finite states. Here's an example:",
+                "code":[
+                    "sealed class Result",
+                    "data class Success(val data: String) : Result()",
+                    "data class Error(val message: String) : Result()"
+                ],
+                "explanation": [
+                    {
+                        "head": "Sealed classes ensure that all subclasses are defined within the same file, making it easier to manage state transitions."
+                    }
+                ]
             },
             {
-                "section": "Functions",
-                "content": "Functions are declared using the fun keyword. fun add(a: Int, b: Int): Int {...} val result = add(3, 5) println(\"3 + 5 = $result\")"
-            },
-            {
-                "section": "Null Safety",
-                "content": "Kotlin's type system helps prevent null pointer exceptions. You can explicitly declare whether a variable can hold null with the ? modifier..."
-            },
-            {
-                "section": "Classes and Objects",
-                "content": "Kotlin supports object-oriented programming. Here's a simple class definition. class Person(val name: String, var age: Int) {...} val person = Person(\"Alice\", 30) person.speak()"
+                "section": "Smart Casts",
+                "content": "Kotlin's smart casts automatically cast objects after checking their type. This feature makes your code cleaner and eliminates the need for explicit casting.",
+                "code":[
+                    "fun printLength(obj: Any) {",
+                    "    if (obj is String) {",
+                    "        // No need for explicit casting",
+                    "        println(obj.length)",
+                    "    }",
+                    "}"
+                ],
+                "explanation": [
+                    {
+                        "head": "Smart casts improve code safety and readability."
+                    }
+                ]
             },
             {
                 "section": "Conclusion",
-                "content": "This guide covers the basics of Kotlin to get you started on your programming journey. Kotlin is a versatile language suitable for various application domains, from Android app development to backend services. As you continue learning, explore Kotlin's rich standard library and advanced features to become a proficient Kotlin developer. Happy coding!"
+                "content": "Kotlin is a versatile language with advanced features that empower developers to write efficient and expressive code. As you explore these intermediate-level concepts, you'll unlock new possibilities and become a more proficient Kotlin programmer. Happy coding!"
             }
         ]
     },
     {
-        "date": "September 20",
-        "author": "Armaan",
-        "topic": "Politics",
-        "language": "Kotlin",
-        "link": "-politics-beginner-guide",
-        "head": "Getting Started with Kotlin: A Beginner's Guide",
-        "images": [
-            {
-                "headImage": {
-                    "src": "/Hero.jpeg",
-                    "alt": "xyz"
-                }
-            }
-        ],
-        "opening": "Politics is a modern, statically-typed programming language developed by JetBrains. It has gained popularity for its conciseness, safety features, and seamless interoperability with Java. If you're new to programming or looking to learn a new language, Kotlin is an excellent choice. In this guide, we'll cover the fundamentals of Kotlin to help you get started.",
-        "sections": [
-            {
-                "section": "Installing Kotlin",
-                "content": "Before we dive into coding, you'll need to set up your development environment. You have a few options..."
-            },
-            {
-                "section": "Your First Kotlin Program",
-                "content": "Let's write a simple \"Hello, World!\" program in Kotlin. Open your preferred development environment and create a new Kotlin file (usually with a .kt extension)..."
-            },
-            {
-                "section": "Variables and Data Types",
-                "content": "Kotlin supports various data types, including: Integers: Int, Long, Short, and Byte. You can declare variables using the val (immutable) and var (mutable) keywords..."
-            },
-            {
-                "section": "Conditional Statements",
-                "content": "Kotlin provides if, else if, and else for conditional logic. val age = 20 if (age < 18) {...} else if (age >= 18 && age < 65) {...} else {...}"
-            },
-            {
-                "section": "Loops",
-                "content": "You can use while and for loops in Kotlin. var i = 0 while (i < 5) {...} for (num in 1..5) {...}"
-            },
-            {
-                "section": "Functions",
-                "content": "Functions are declared using the fun keyword. fun add(a: Int, b: Int): Int {...} val result = add(3, 5) println(\"3 + 5 = $result\")"
-            },
-            {
-                "section": "Null Safety",
-                "content": "Kotlin's type system helps prevent null pointer exceptions. You can explicitly declare whether a variable can hold null with the ? modifier..."
-            },
-            {
-                "section": "Classes and Objects",
-                "content": "Kotlin supports object-oriented programming. Here's a simple class definition. class Person(val name: String, var age: Int) {...} val person = Person(\"Alice\", 30) person.speak()"
-            },
-            {
-                "section": "Conclusion",
-                "content": "This guide covers the basics of Kotlin to get you started on your programming journey. Kotlin is a versatile language suitable for various application domains, from Android app development to backend services. As you continue learning, explore Kotlin's rich standard library and advanced features to become a proficient Kotlin developer. Happy coding!"
-            }
-        ]
-    },
-    {
-        "date": "September 20",
+        "date": "Sept 21",
         "author": "Armaan",
         "topic": "Leet Code",
         "language": "Kotlin",
-        "link": "-Leet Code-How-to-reverse-a-string",
-        "head": "Getting Started with Kotlin: A Beginner's Guide",
+        "link": "-Leet Code-Longest-Substring-Without-Repeating-Characters",
+        "head": "Leetcode: Longest Substring Without Repeating Characters",
         "images": [
             {
                 "headImage": {
-                    "src": "/Hero.jpeg",
-                    "alt": "xyz"
+                    "src": "/HeadImage.png",
+                    "alt": "Leet Code image with the logo"
                 }
             }
         ],
-        "opening": "Leet Code is a modern, statically-typed programming language developed by JetBrains. It has gained popularity for its conciseness, safety features, and seamless interoperability with Java. If you're new to programming or looking to learn a new language, Kotlin is an excellent choice. In this guide, we'll cover the fundamentals of Kotlin to help you get started.",
+        "opening": "Given a string s, we are tasked with finding the length of the longest substring without repeating characters.",
         "sections": [
             {
-                "section": "Installing Kotlin",
-                "content": "Before we dive into coding, you'll need to set up your development environment. You have a few options..."
+                "section": "Problem Overview",
+                "content": "This problem requires us to find a substring within the given string s such that it does not contain any repeating characters. Our goal is to determine the length of the longest such substring."
             },
             {
-                "section": "Your First Kotlin Program",
-                "content": "Let's write a simple \"Hello, World!\" program in Kotlin. Open your preferred development environment and create a new Kotlin file (usually with a .kt extension)..."
+                "section": "Example Scenarios",
+                "content": "Let's illustrate the problem with a few examples:"
             },
             {
-                "section": "Variables and Data Types",
-                "content": "Kotlin supports various data types, including: Integers: Int, Long, Short, and Byte. You can declare variables using the val (immutable) and var (mutable) keywords..."
+                "section": "Example 1:",
+                "content": "Input:",
+                "code": [
+                    "s = \"abcabcbb\""
+                ]
             },
             {
-                "section": "Conditional Statements",
-                "content": "Kotlin provides if, else if, and else for conditional logic. val age = 20 if (age < 18) {...} else if (age >= 18 && age < 65) {...} else {...}"
+                "section": "Output:",
+                "content": "",
+                "code": [
+                    "3"
+                ],
+                "explanation": [
+                    {
+                        "head": "Explanation:",
+                        "ol": [
+                            "The longest substring without repeating characters is \"abc\", with a length of 3."
+                        ]
+                    }
+                ]
             },
             {
-                "section": "Loops",
-                "content": "You can use while and for loops in Kotlin. var i = 0 while (i < 5) {...} for (num in 1..5) {...}"
+                "section": "Example 2:",
+                "content": "Input:",
+                "code": [
+                    "s = \"bbbbb\""
+                ]
             },
             {
-                "section": "Functions",
-                "content": "Functions are declared using the fun keyword. fun add(a: Int, b: Int): Int {...} val result = add(3, 5) println(\"3 + 5 = $result\")"
+                "section": "Output:",
+                "content": "",
+                "code": [
+                    "1"
+                ],
+                "explanation": [
+                    {
+                        "head": "Explanation:",
+                        "ol": [
+                            "In this case, the longest substring without repeating characters is \"b\", with a length of 1."
+                        ]
+                    }
+                ]
             },
             {
-                "section": "Null Safety",
-                "content": "Kotlin's type system helps prevent null pointer exceptions. You can explicitly declare whether a variable can hold null with the ? modifier..."
+                "section": "Example 3:",
+                "content": "Input:",
+                "code": [
+                    "s = \"pwwkew\""
+                ]
             },
             {
-                "section": "Classes and Objects",
-                "content": "Kotlin supports object-oriented programming. Here's a simple class definition. class Person(val name: String, var age: Int) {...} val person = Person(\"Alice\", 30) person.speak()"
+                "section": "Output:",
+                "content": "",
+                "code": [
+                    "3"
+                ],
+                "explanation": [
+                    {
+                        "head": "Explanation:",
+                        "ol": [
+                            "Here, the longest substring without repeating characters is \"wke\", with a length of 3. Please note that \"pwke\" is a subsequence, not a substring."
+                        ]
+                    }
+                ]
+            },
+            {
+                "section": "Approach",
+                "content": "To solve this problem, we can use the sliding window technique. We'll maintain two pointers, left and right, which represent the current substring we are considering. We'll also maintain a set to keep track of the characters in the current substring.",
+                "list": [
+                    {
+                        "head": "",
+                        "content": "Initialize left and right to 0."
+                    },
+                    {
+                        "head": "",
+                        "content": "Initialize an empty set to store characters."
+                    },
+                    {
+                        "head": "",
+                        "content": "Initialize a variable maxLength to 0 to keep track of the longest substring length."
+                    },
+                    {
+                        "head": "",
+                        "content": "Iterate right from 0 to the end of the string:"
+                    }
+                ],
+                "ol": [
+                    "If s[right] is not in the set:",
+                    {
+                        "ol": [
+                            "Add s[right] to the set.",
+                            "Update maxLength as Math.max(maxLength, right - left + 1).",
+                            "Increment right to expand the window."
+                        ]
+                    },
+                    "If s[right] is already in the set:",
+                    {
+                        "ol": [
+                            "Remove s[left] from the set.",
+                            "Increment left to shrink the window."
+                        ]
+                    }
+                ],
+                "explanation": [
+                    {
+                        "head": "",
+                        "ol": [
+                            "By following this approach, we can efficiently find the length of the longest substring without repeating characters."
+                        ]
+                    }
+                ]
+            },
+            {
+                "section": "Implementation in JavaScript",
+                "content": "Here's the JavaScript code to solve the problem:",
+                "code": [
+                    "function lengthOfLongestSubstring(s) {",
+                    "    let left = 0;",
+                    "    let maxLength = 0;",
+                    "    const charSet = new Set();",
+                    " ",
+                    "    for (let right = 0; right < s.length; right++) {",
+                    "        while (charSet.has(s[right])) {",
+                    "            charSet.delete(s[left]);",
+                    "            left++;",
+                    "        }",
+                    "        charSet.add(s[right]);",
+                    "        maxLength = Math.max(maxLength, right - left + 1);",
+                    "    }",
+                    " ",
+                    "    return maxLength;",
+                    "}"
+                ]
             },
             {
                 "section": "Conclusion",
-                "content": "This guide covers the basics of Kotlin to get you started on your programming journey. Kotlin is a versatile language suitable for various application domains, from Android app development to backend services. As you continue learning, explore Kotlin's rich standard library and advanced features to become a proficient Kotlin developer. Happy coding!"
+                "content": "The problem of finding the length of the longest substring without repeating characters can be efficiently solved using the sliding window technique. By maintaining two pointers and a set to keep track of characters, we can determine the maximum length of such substrings. This approach has a time complexity of O(n), where n is the length of the input string s, making it an efficient solution for larger inputs."
             }
         ]
     }

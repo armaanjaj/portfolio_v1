@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/memoize": "^0.8.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.16",
@@ -23,7 +24,9 @@
     "next": "13.2.4",
     "node-cache": "^5.1.2",
     "react": "18.2.0",
+    "react-code-blocks": "^0.1.4",
     "react-dom": "18.2.0",
+    "react-quill": "^2.0.0",
     "react-redux": "^8.1.2",
     "redux": "^4.2.1",
     "redux-persist": "^6.0.0",

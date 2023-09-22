@@ -44,6 +44,8 @@ export default async function getBlogs(req, res) {
                 }
             }
 
+            blogs.sort((a, b) => new Date(a.date) - new Date(b.date)).reverse();
+
             // return the customized data
             return blogs;
         });
