@@ -67,7 +67,7 @@ module.exports = {
                         backgroundColor: "#8f33ff",
                         boxShadow: "0 0 15px 0px #9d4dff",
                     },
-                },
+                }
             },
         },
     },

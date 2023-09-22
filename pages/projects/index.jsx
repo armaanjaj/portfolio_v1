@@ -8,10 +8,11 @@ import Link from "next/link";
 import Meta from "@/components/Meta";
 import useAxios from "@/hooks/useAxios";
 import Loader from "@/components/Loaders/Loader";
+import Idea from "@/components/Logo/Idea";
 
 function Home() {
     const [projects, setProjects] = useState([]);
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
 
     const projectData = useAxios({
         method: "get",
@@ -21,10 +22,10 @@ function Home() {
 
     useEffect(() => {
         setTitle();
-        setLoading(true)
-        if (projectData.response !== null){
+        setLoading(true);
+        if (projectData.response !== null) {
             setProjects(projectData.response);
-            setLoading(false)
+            setLoading(false);
         }
     }, [projectData]);
 
@@ -53,49 +54,50 @@ function Home() {
                         <div className="text-[3rem] font-semibold">
                             Projects
                         </div>
-                        <div>
+                        <div className="flex flex-row justify-end items-center gap-8">
+                            <Link href={"/idea"}>
+                                <Idea />
+                            </Link>
                             <Link href={"/"}>
                                 <HomeOutlinedIcon className="text-[2rem]" />
                             </Link>
                         </div>
                     </div>
                     <div className="flex flex-row justify-center items-center flex-wrap gap-5 mobile:mt-[2rem] tablet:mt-[2rem] laptop:mt-[5rem] desktop:mt-[5rem]">
-                        {
-                            !loading ? (
-                                projects?.map((project, i) => (
-                                    <motion.div
-                                        initial={{
-                                            opacity: 0,
-                                            y: 10,
-                                        }}
-                                        whileInView={{
-                                            opacity: 1,
-                                            y: 0,
-                                        }}
-                                        viewport={{
-                                            once: true,
-                                            amount: 1,
-                                        }}
-                                        transition={{
-                                            duration: 0.5,
-                                            delay: i / 11,
-                                        }}
+                        {!loading ? (
+                            projects?.map((project, i) => (
+                                <motion.div
+                                    initial={{
+                                        opacity: 0,
+                                        y: 10,
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                        y: 0,
+                                    }}
+                                    viewport={{
+                                        once: true,
+                                        amount: 1,
+                                    }}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: i / 11,
+                                    }}
+                                    key={i}
+                                >
+                                    <ProjectCard
+                                        title={project.title}
+                                        slug={project.repo_name}
+                                        stack={project.stack}
+                                        overview={project.overview}
+                                        links={project.links}
                                         key={i}
-                                    >
-                                        <ProjectCard
-                                            title={project.title}
-                                            slug={project.repo_name}
-                                            stack={project.stack}
-                                            overview={project.overview}
-                                            links={project.links}
-                                            key={i}
-                                        />
-                                    </motion.div>
-                                ))
-                            ):(
-                                <Loader/>
-                            )
-                        }
+                                    />
+                                </motion.div>
+                            ))
+                        ) : (
+                            <Loader />
+                        )}
                     </div>
                     <div className="flex flex-row justify-center items-center mt-8">
                         <motion.div

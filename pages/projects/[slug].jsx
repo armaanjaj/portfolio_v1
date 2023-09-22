@@ -12,6 +12,7 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeRounded";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import useAxios from "@/hooks/useAxios";
 import LoaderFS from "@/components/Loaders/Loader-FS";
+import Idea from "@/components/Logo/Idea";
 
 function SlugPage() {
     const router = useRouter();
@@ -153,7 +154,11 @@ function SlugPage() {
                             }}
                         >
                             {projectDetails?.overview}{" "}
-                            <Link target="_blank" className="underline" href={projectDetails?.links?.readmore || "#"}>
+                            <Link
+                                target="_blank"
+                                className="underline"
+                                href={projectDetails?.links?.readmore || "#"}
+                            >
                                 <OpenInNewIcon /> <span>Read more</span>
                             </Link>
                         </motion.div>
@@ -421,6 +426,14 @@ function SlugPage() {
                                 </div>
                             </>
                         )}
+                    </div>
+                </div>
+                <div className="w-full h-full flex flex-row justify-center items-center pb-10">
+                    <div className="flex flex-col justify-center items-center">
+                        <div className="font-bold">Read all my latest blogs at</div>
+                        <Link href={"/idea"}>
+                            <Idea />
+                        </Link>
                     </div>
                 </div>
             </div>

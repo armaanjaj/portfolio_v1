@@ -8,6 +8,9 @@ import Contact from "@/components/sections/Contact";
 import { useEffect, useState } from "react";
 import Meta from "@/components/Meta";
 import useAxios from "@/hooks/useAxios";
+import Featured from "@/components/sections/Featured";
+import Idea from "@/components/Logo/Idea";
+import Link from "next/link";
 
 // UNCOMMENT IF READING FILES LOCALLY
 // import allProjects from "../data/projectData/index.json";
@@ -65,10 +68,19 @@ export default function Home() {
             <Navigation />
             <Hero />
             <div className={styles.container}>
+                <Featured />
                 <About />
                 <Projects projects={projects} />
                 <Skills skills={skills} />
                 <Contact />
+                <footer className="w-full h-full flex flex-row justify-center items-center pt-10">
+                    <div className="flex flex-col justify-center items-center">
+                        <div className="font-bold">Read all my latest blogs at</div>
+                        <Link href={"/idea"}>
+                            <Idea />
+                        </Link>
+                    </div>
+                </footer>
             </div>
         </main>
     );
