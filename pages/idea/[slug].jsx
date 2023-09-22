@@ -6,6 +6,7 @@ import LoaderFS from "@/components/Loaders/Loader-FS";
 import useAxios from "@/hooks/useAxios";
 import Image from "next/image";
 import { CodeBlock } from "react-code-blocks";
+import Meta from "@/components/Meta";
 
 export default function BlogSlugPage() {
     const router = useRouter();
@@ -37,6 +38,17 @@ export default function BlogSlugPage() {
 
     return (
         <>
+            <Meta
+                title={"!dea | armaancodes.com"}
+                seoTitle={"!dea | armaancodes.com"}
+                seoURL={"https://www.armaancodes.com/idea"}
+                keywords={"web blogs, armaancodes blogs, armaancodes.com blogs, programming blogs, latest blogs, armaan singh jaj software developer blogs, calgary blogs, idea blogs, latest idea blogs, armaancodes.com idea blogs"}
+                description={"On Idea blogs encourages learning. Idea blogs present you new fresh blogs on plathora of topics. Read latest blogs on armaancodes.com/idea"}
+                seoDescription={"On Idea blogs encourages learning. Idea blogs present you new fresh blogs on plathora of topics. Read latest blogs on armaancodes.com/idea"}
+                seoImage={"https://github.com/armaanjaj/portfolio_v2/assets/113659942/d9453b3c-5259-453d-9320-6ccbbeca3a04"}
+                twitterCreator={"https://github.com/armaanjaj/portfolio_v2/assets/113659942/d9453b3c-5259-453d-9320-6ccbbeca3a04"}
+                theme="#C670DF"
+            />
             <div
                 className="text-black h-full min-h-screen"
                 style={{ background: `${mode.bg}`, color: `${mode.text}` }}
