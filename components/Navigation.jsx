@@ -69,12 +69,12 @@ function Hamburger() {
                             className="text-center"
                             variants={menuItemVariants}
                         >
-                            <a
+                            <Link
                                 className="text-[3rem] font-bold"
                                 href="#aboutme"
                             >
                                 About me
-                            </a>
+                            </Link>
                         </motion.div>
                         <motion.div
                             className="text-center"
@@ -91,34 +91,34 @@ function Hamburger() {
                             className="text-center"
                             variants={menuItemVariants}
                         >
-                            <a
+                            <Link
                                 className="text-[3rem] font-bold"
                                 href="#skills"
                             >
                                 Skills
-                            </a>
+                            </Link>
                         </motion.div>
                         <motion.div
                             className="text-center"
                             variants={menuItemVariants}
                         >
-                            <a
+                            <Link
                                 className="text-[3rem] font-bold"
                                 href="/idea"
                             >
                                 Blogs
-                            </a>
+                            </Link>
                         </motion.div>
                         <motion.div
                             className="text-center"
                             variants={menuItemVariants}
                         >
-                            <a
+                            <Link
                                 className="text-[3rem] font-bold"
                                 href="#getintouch"
                             >
                                 Get in Touch
-                            </a>
+                            </Link>
                         </motion.div>
                     </motion.div>
                 </div>

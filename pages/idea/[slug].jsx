@@ -16,8 +16,6 @@ export default function BlogSlugPage() {
     const [slug, setSlug] = React.useState(null);
     const [loading, setLoading] = React.useState(false);
 
-    let codeIndex = 0;
-
     const blog = useAxios({
         method: "get",
         url: `/api/getBlog?slug=${slug}`,
@@ -36,30 +34,6 @@ export default function BlogSlugPage() {
             setLoading(false);
         }
     }, [router.isReady, router.query, blog]);
-
-    const writeCode = (index) => {
-        let code = "";
-        {
-            blogData.sections &&
-                blogData.sections.forEach((section) => {
-                    {
-                        section.code &&
-                            section.code?.map((line) => {
-                                if (
-                                    line === "false" ||
-                                    codeIndex < parseInt(line)
-                                ) {
-                                    return code;
-                                } else {
-                                    code += line + "\n";
-                                }
-                            });
-                    }
-                });
-        }
-        codeIndex = index;
-        return code;
-    };
 
     return (
         <>

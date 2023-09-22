@@ -20,6 +20,7 @@ export default function Page() {
     const [topicList, setTopicList] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
     const [topicsDropdown, setTopicsDropdown] = React.useState(false);
+    const [queryTopic, setQueryTopic] = React.useState(null);
 
     const blogs = useAxios({
         method: "get",
@@ -32,14 +33,11 @@ export default function Page() {
         headers: JSON.stringify({ accept: "*/*" }),
     });
 
-    let filteredBlogs = [];
-    if (router.isReady) {
-        filteredBlogs = useAxios({
-            method: "get",
-            url: `/api/getFilteredBlogs?topic=${router.query.topic}`,
-            headers: JSON.stringify({ accept: "*/*" }),
-        });
-    }
+    filteredBlogs = useAxios({
+        method: "get",
+        url: `/api/getFilteredBlogs?topic=${queryTopic}`,
+        headers: JSON.stringify({ accept: "*/*" }),
+    });
 
     React.useEffect(() => {
         document.title = "!dea - Read all my latest blogs";
@@ -56,6 +54,8 @@ export default function Page() {
         setLoading(false);
 
         if (!router.isReady) return;
+
+        setSlug(router.query.topic);
 
         if (router.query.topic) {
             const topicName = router.query.topic;
@@ -123,7 +123,12 @@ export default function Page() {
                         <div className="px-5 flex flex-col justify-start items-start gap-2">
                             <div className="font-semibold text-2xl flex flex-row justify-between items-center flex-nowrap">
                                 <span>Topics</span>
-                                <span onClick={()=>setTopicsDropdown(!topicsDropdown)} className="smallMobile:block mobile:block tablet:hidden laptop:hidden desktop:hidden largeDesktop:hidden">
+                                <span
+                                    onClick={() =>
+                                        setTopicsDropdown(!topicsDropdown)
+                                    }
+                                    className="smallMobile:block mobile:block tablet:hidden laptop:hidden desktop:hidden largeDesktop:hidden"
+                                >
                                     {!topicsDropdown ? (
                                         <ArrowDropDownOutlinedIcon />
                                     ) : (
@@ -132,7 +137,11 @@ export default function Page() {
                                 </span>
                             </div>
 
-                            <div className={`py-2 flex-row justify-start items-center flex-wrap gap-3 ${!topicsDropdown ? 'hidden' : 'flex'} tablet:hidden laptop:hidden desktop:hidden largeDesktop:hidden`}>
+                            <div
+                                className={`py-2 flex-row justify-start items-center flex-wrap gap-3 ${
+                                    !topicsDropdown ? "hidden" : "flex"
+                                } tablet:hidden laptop:hidden desktop:hidden largeDesktop:hidden`}
+                            >
                                 {topicList.map((topic) => (
                                     <TopicItem
                                         selected={selectedTopic === topic}
