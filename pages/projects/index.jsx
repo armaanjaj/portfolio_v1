@@ -48,7 +48,7 @@ function Home() {
                 seoTitle={"Projects | armaancodes.com"}
                 seoURL={"https://www.armaancodes.com/projects"}
             />
-            <div className="bg-[#08001A] min-h-screen">
+            <div className="bg-[#08001A] min-h-screen pt-10">
                 <div className={styles.container}>
                     <div className="flex flex-row justify-between items-center gap-10">
                         <div className="text-[3rem] font-semibold">
@@ -126,6 +126,14 @@ function Home() {
                                 Return to home{" "}
                             </Link>
                         </motion.div>
+                    </div>
+                </div>
+                <div className="w-full h-full flex flex-row justify-center items-center pb-10">
+                    <div className="flex flex-col justify-center items-center">
+                        <div className="font-bold">Read all my latest blogs at</div>
+                        <Link href={"/idea"}>
+                            <Idea />
+                        </Link>
                     </div>
                 </div>
             </div>
