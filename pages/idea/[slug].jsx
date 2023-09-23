@@ -54,7 +54,7 @@ export default function BlogSlugPage() {
                 style={{ background: `${mode.bg}`, color: `${mode.text}` }}
             >
                 <Navigation />
-                <div className="w-full h-full smallMobile:px-0 mobile:px-0 tablet:px-5 laptop:px-32 desktop:px-40 largeDesktop:px-52 pt-[calc((4.5rem+2rem))] pb-8 min-h-screen">
+                <div className="w-full h-full smallMobile:px-0 mobile:px-0 tablet:px-5 laptop:px-32 desktop:px-40 largeDesktop:px-80 pt-[calc((4.5rem+2rem))] pb-8 min-h-screen">
                     <div className="flex flex-col justify-start items-center px-10 smallMobile:border-x-0 mobile:border-x-0 tablet:border-x-[0.05rem] laptop:border-x-[0.05rem] desktop:border-x-[0.05rem] largeDesktop:border-x-[0.05rem] border-gray-300 gap-5 min-h-screen">
                         <h1 className="font-extrabold text-3xl">
                             {blogData?.head}

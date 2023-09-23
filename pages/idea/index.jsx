@@ -100,7 +100,7 @@ export default function Page() {
                 </div> */}
 
                     {/* Page section 1 */}
-                    <div className="flex flex-row justify-evenly items-start w-full p-5 smallMobile:flex-wrap-reverse mobile:flex-wrap-reverse tablet:flex-wrap-reverse laptop:flex-nowrap desktop:flex-nowrap largeDesktop:flex-nowrap">
+                    <div className="flex flex-row justify-evenly items-start w-full smallMobile:flex-wrap-reverse mobile:flex-wrap-reverse tablet:flex-wrap-reverse laptop:flex-nowrap desktop:flex-nowrap largeDesktop:flex-nowrap py-5 smallMobile:px-5 mobile:px-5 tablet:px-5 laptop:px-5 desktop:px-5 largeDesktop:px-80">
                         <div className=" min-h-screen smallMobile:w-full mobile:w-full tablet:w-full laptop:w-2/3 desktop:w-2/3 largeDesktop:w-2/3 smallMobile:border-0 mobile:border-0 tablet:border-0 laptop:border-r-[0.05rem] desktop:border-r-[0.05rem] largeDesktop:border-r-[0.05rem] border-gray-300">
                             <div>
                                 {/* <div className="font-semibold text-2xl">

@@ -21,7 +21,7 @@ export default function Navigation() {
 
     return (
         <nav
-            className={'flex flex-row justify-evenly items-center px-8 py-5 w-full border-b-gray-300 border-b-[0.05rem] fixed z-[999] h-[4.5rem]'}
+            className={'flex flex-row justify-evenly items-center smallMobile:px-8 mobile:px-8 tablet:px-8 laptop:px-8 desktop:px-8 largeDesktop:px-80 py-5 w-full border-b-gray-300 border-b-[0.05rem] fixed z-[999] h-[4.5rem]'}
             style={{
                 background: `${mode.bg}`,
                 color: `${mode.text}`
